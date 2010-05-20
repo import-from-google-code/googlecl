@@ -12,6 +12,14 @@ This section isn't as interesting as the others, so it gets less attention. Look
 = Guiding =
 Things we want GoogleCL to be able to do in the short term. Implementing any one of these scenarios should take a couple of days.
 
+===Export contacts to a spreadsheet===
+Code:
+{{{
+> contacts list title,email > my_contacts.csv
+> docs upload my_contacts.csv
+}}}
+Blocking: Contacts API not supported yet
+
 ===Upload a photo to picasa then email the link to all your contacts===
 Code:
 {{{
@@ -38,7 +46,7 @@ Code:
 {{{
 > cal today
 }}}
-Blocking: No calendar service implemented yet (client libraries do exist, though).
+Blocking: No calendar service support yet (client libraries do exist, though).
 
 ===Search Google for top results, summaries, links, etc.===
 Code:
