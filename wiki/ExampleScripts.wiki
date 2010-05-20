@@ -56,7 +56,7 @@ Code:
 
 [...]
 }}}
-Blocking: Google search results aren't involved with the GData protocol - a separate HTTP client would has to be written.
+Blocking: Google search results aren't involved with the GData protocol - a separate HTTP client would have to be written.
 
 ===Get latitude and longitude for arbitrary addresses===
 Code:
