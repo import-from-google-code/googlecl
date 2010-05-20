@@ -1,0 +1,13 @@
+#summary What we've got, what we want
+
+=Extended=
+Roughly ordered by most fleshed out to least...
+  * [http://code.google.com/apis/picasaweb/overview.html Picasa] (photos)
+  * [http://code.google.com/apis/documents/overview.html Docs]
+  * [http://code.google.com/apis/youtube/getting_started.html#data_api YouTube]
+  * [http://code.google.com/apis/blogger/ Blogger]
+
+=On the block=
+Services that are being looked at, roughly from most interested to least interested.
+  * [http://code.google.com/apis/contacts/ Contacts]
+  * [http://code.google.com/apis/calendar/ Calendar]
