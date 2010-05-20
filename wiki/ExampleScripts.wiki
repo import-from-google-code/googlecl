@@ -4,12 +4,13 @@
 This document is current as of at least r75
 
 = Implemented =
-*Useful things GoogleCL can do (we hope) as of the current revision.*
+Useful things GoogleCL can do (we hope) as of the current revision.
 
+This section isn't as interesting as the others, so it gets less attention. Look at the README for what you can currently do.
 
 
 = Guiding =
-*Things we want GoogleCL to be able to do.*
+Things we want GoogleCL to be able to do in the short term. Implementing any one of these scenarios should take a couple of days.
 
 ===Upload a photo to picasa then email the link to all your contacts===
 Code:
@@ -30,42 +31,36 @@ Code:
 Blocking: list command as written will list the album data not the data of photos inside
 
 = Future =
-youtube upload foo.avi
-  
-contacts list
-  
-gmail search 'from:me to:me'
-8:49 PM 
-picasa upload --album "kittens" *.jpg
-  
-calendar appointments
-  
-or, calendar today
-8:50 PM 
-search 'omgponies'
-  
-OMG! Ponies!
-Apr 9, 2010 ... OMG! Ponies! is powered by WordPress 2.9.1 and Redoable 1.2 | RSS Entries and RSS Comments. Powered by Redoable 1.2. Quantcast.
-www.omg-ponies.com/ - Cached - Similar
-Urban Dictionary: omg ponies
-omg ponies - 1 definition - an involuntary exclamation when confronted by extreme awesomeness or cuteness.
-www.urbandictionary.com/define.php?term=omg%20ponies - Cached
-  
-search --csv 'omgponies'
-8:51 PM 
+Things that would be really super cool if GoogleCL could do them. They may be totally feasible given a decent amount of time, or insanely difficult.
+
+===Show what you have to do today===
+Code:
+{{{
+> cal today
+}}}
+Blocking: No calendar service implemented yet (client libraries do exist, though).
+
+===Search Google for top results, summaries, links, etc.===
+Code:
+{{{
+> search --csv 'omgponies'
 "OMG! Ponies!","Apr 9, 2010","OMG! Ponies! is powered by WordPress 2.9.1 and Re...","www.omg-ponies.com/"
-  
-etc.
-  
-docs upload foo.doc bar.xls
-8:52 PM 
-maps search --latlong "1600 Amphitheatre 94043"
-  
+
+[...]
+}}}
+Blocking: Google search results aren't involved with the GData protocol - a separate HTTP client would has to be written.
+
+===Get latitude and longitude for arbitrary addresses===
+Code:
+{{{
+> maps search --latlong "1600 Amphitheatre 94043"
 122.1234091,38.12313587,12
-8:53 PM 
-translate --to "French" "this cheese is delicious"
-*Things that would be really super cool if GoogleCL could do them.*
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+}}}
+Blocking: No client libraries.
+
+===Translate text via Google translate===
+Code:
+{{{
+> translate --to "French" "this cheese is delicious"
+}}}
+Blocking: No python client library, low priority
