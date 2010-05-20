@@ -1,0 +1,71 @@
+#summary Complex things that you can do (or we want to be able to do)
+
+*Note:* I've replaced `$ ./google-cl.py` with `> ` for simplicity's sake.
+This document is current as of at least r75
+
+= Implemented =
+*Useful things GoogleCL can do (we hope) as of the current revision.*
+
+
+
+= Guiding =
+*Things we want GoogleCL to be able to do.*
+
+===Upload a photo to picasa then email the link to all your contacts===
+Code:
+{{{
+> picasa post --album album_to_post_to /path/to/photo.jpg
+> picasa list url-site --album album_to_post > link_to_photo_in_album.txt
+> mail --to contact1,contact2 --subject "New Photo!" link_to_photo_in_album.txt
+}}}
+Blocking: No Gmail python client library, no write access to gmail (read-only feeds), difficult to list photos unless you know precise tags / name of photo.
+
+===Upload photos in a directory tree to picasa and create a spreadsheet of them===
+Code:
+{{{
+> picasa create --album new_album /path/to/photos/*.jpg
+> picasa list title,url-direct --album new_album --delimiter , > new_album.csv
+> docs upload new_album.csv
+}}}
+Blocking: list command as written will list the album data not the data of photos inside
+
+= Future =
+youtube upload foo.avi
+  
+contacts list
+  
+gmail search 'from:me to:me'
+8:49 PM 
+picasa upload --album "kittens" *.jpg
+  
+calendar appointments
+  
+or, calendar today
+8:50 PM 
+search 'omgponies'
+  
+OMG! Ponies!
+Apr 9, 2010 ... OMG! Ponies! is powered by WordPress 2.9.1 and Redoable 1.2 | RSS Entries and RSS Comments. Powered by Redoable 1.2. Quantcast.
+www.omg-ponies.com/ - Cached - Similar
+Urban Dictionary: omg ponies
+omg ponies - 1 definition - an involuntary exclamation when confronted by extreme awesomeness or cuteness.
+www.urbandictionary.com/define.php?term=omg%20ponies - Cached
+  
+search --csv 'omgponies'
+8:51 PM 
+"OMG! Ponies!","Apr 9, 2010","OMG! Ponies! is powered by WordPress 2.9.1 and Re...","www.omg-ponies.com/"
+  
+etc.
+  
+docs upload foo.doc bar.xls
+8:52 PM 
+maps search --latlong "1600 Amphitheatre 94043"
+  
+122.1234091,38.12313587,12
+8:53 PM 
+translate --to "French" "this cheese is delicious"
+*Things that would be really super cool if GoogleCL could do them.*
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
