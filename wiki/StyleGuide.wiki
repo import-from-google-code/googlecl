@@ -7,7 +7,9 @@ Follow the Python Style Guide ([http://www.python.org/dev/peps/pep-0008/ PEP 8] 
 All options given to optparse should have the same long name and destination name.
 
 ===Modules and packages===
-New packages should be named after the service they are implementing, and contain a module named service. The service module must define several items:
+New packages should be named after the service they are implementing. The package init file must define a string SECTION_HEADER, which gives the section header of the config file that service-specific options are defined in.
+
+Each package must also contain a module named service. The service module must define two items:
   * service_class: alternate name for the service being implemented. For example, service_class = CalendarServiceCL
   * tasks: a dictionary mapping names of tasks (e.g. 'list') to util.Task instances.
 
