@@ -1,16 +1,10 @@
 #summary Complex things that you can do (or we want to be able to do)
 
-*Note:* I've replaced `$ ./google-cl.py` with `> ` for simplicity's sake.
-This document is current as of at least r75
+*Note:* I've replaced `$ ./google.py` with `> ` for simplicity's sake.
+This document is current as of at least r107
 
 = Implemented =
 Useful things GoogleCL can do (we hope) as of the current revision.
-
-This section isn't as interesting as the others, so it gets less attention. Look at the README for what you can currently do.
-
-
-= Guiding =
-Things we want GoogleCL to be able to do in the short term. Implementing any one of these scenarios should take a couple of days.
 
 ===Export contacts to a spreadsheet===
 Code:
@@ -18,7 +12,14 @@ Code:
 > contacts list title,email > my_contacts.csv
 > docs upload my_contacts.csv
 }}}
-Blocking: Contacts API not supported yet
+
+
+Check out the README for more examples of what you can do.
+
+
+= Guiding =
+Things we want GoogleCL to be able to do in the short term. Implementing any one of these scenarios should take a couple of days.
+
 
 ===Upload a photo to picasa then email the link to all your contacts===
 Code:
@@ -41,12 +42,6 @@ Blocking: list command as written will list the album data not the data of photo
 = Future =
 Things that would be really super cool if GoogleCL could do them. They may be totally feasible given a decent amount of time, or insanely difficult.
 
-===Show what you have to do today===
-Code:
-{{{
-> cal today
-}}}
-Blocking: No calendar service support yet (client libraries do exist, though).
 
 ===Search Google for top results, summaries, links, etc.===
 Code:
