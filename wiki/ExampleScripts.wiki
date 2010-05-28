@@ -42,6 +42,12 @@ Blocking: list command as written will list the album data not the data of photo
 = Future =
 Things that would be really super cool if GoogleCL could do them. They may be totally feasible given a decent amount of time, or insanely difficult.
 
+===Arbitrary gdata calls===
+
+Not all gdata APIs have python convenience libraries.  It'd be great if I could use googlecl to make calls to the underlying AtomPub / JSON services.  The command line options might not look as pretty, but googlecl might then be able to be come forward-compatible with new gdata APIs.
+
+For example, say I want to use Google Maps geocoding features even though they're not "natively" supported by googlecl.  I find the documentation page for the javascript library: [http://code.google.com/apis/maps/documentation/javascript/services.html#GeocodingRequests] and somehow pass enough information to googlecl for it to construct the proper (potentially very ugly) request object and display the (potentially very ugly) response object. 
+
 
 ===Search Google for top results, summaries, links, etc.===
 Code:
