@@ -1,4 +1,5 @@
 #summary Example commands and tasks GoogleCL can do.
+#labels Featured
 Some terminology:
   * service - The Google service being used (Picasa, Blogger, etc.)
   * task - The task that the service will be doing (tag, post, delete, etc.)
