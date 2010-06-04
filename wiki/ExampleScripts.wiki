@@ -17,7 +17,6 @@ Also see the [Manual]
   * {{{google.py calendar today # List events for today only. }}}
 
 ==Contacts==
-  * Note: requires gdata 2.0 or later
   * {{{google.py contacts add "Jim Raynor, jimmy@noreaster.com" contacts.csv}}}
   * {{{google.py contacts delete --title Jerkface}}}
   * {{{google.py contacts list name,email --title ".*bob.*" > the_bobs.csv}}}
