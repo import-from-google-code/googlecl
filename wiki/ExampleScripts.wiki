@@ -11,15 +11,16 @@ Also see the [Manual]
   * {{{google.py tag --title "Dev post" --tags "Python, software" # label an existing post}}}
 
 ==Calendar==
-  * {{{google.py calendar add "Dinner party with George tomorrow at 6pm" # add event to calendar}}}
-  * {{{google.py calendar delete --cal "GoogleCL dev cal" --title "Release.*" # Delete an event.}}}
-  * {{{google.py calendar list --date 2010-06-01,2010-06-30 # List events.}}}
+  * {{{google.py calendar add "Dinner party with George today at 6pm" # add event to calendar}}}
   * {{{google.py calendar today # List events for today only. }}}
+  * {{{google.py calendar list --date 2010-06-01,2010-06-30 # List events.}}}
+  * {{{google.py calendar delete --title "Dinner party with George" # Delete an event.}}}
 
 ==Contacts==
-  * {{{google.py contacts add "Jim Raynor, jimmy@noreaster.com" contacts.csv}}}
-  * {{{google.py contacts delete --title Jerkface}}}
-  * {{{google.py contacts list name,email --title ".*bob.*" > the_bobs.csv}}}
+  * {{{google.py contacts add "J. Random Hacker, jrandom@example.com"}}}
+  * {{{google.py contacts list name,email --title "J. Random Hacker"}}}
+  * {{{google.py contacts delete --title "J. Random Hacker"}}}
+
 
 ==Docs==
   * Note: requires gdata 2.0 or later
