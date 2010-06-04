@@ -10,22 +10,24 @@ Also see the [Manual]
   * {{{google.py tag --title "Dev post" --tags "Python, software" # label an existing post}}}
 
 ==Calendar==
-  * add: Add event to calendar. {{{add "Dinner party with George tomorrow at 6pm"}}}
-  * delete: Delete an event. {{{delete --cal "GoogleCL dev cal" --title "Release.*"}}}
-  * list: List events. {{{list --date 2010-06-01,2010-06-30}}}
-  * today: List events for today only. {{{today}}}
+  * {{{google.py calendar add "Dinner party with George tomorrow at 6pm" # add event to calendar}}}
+  * {{{google.py calendar delete --cal "GoogleCL dev cal" --title "Release.*" # Delete an event.}}}
+  * {{{google.py calendar list --date 2010-06-01,2010-06-30 # List events.}}}
+  * {{{google.py calendar today # List events for today only. }}}
 
 ==Contacts==
-  * add: Add contacts. {{{add "Jim Raynor, jimmy@noreaster.com" contacts.csv}}}
-  * delete: Delete contacts. {{{delete --title Jerkface}}}
-  * list: List contacts. {{{list name,email --title ".*bob.*" > the_bobs.csv}}}
+  * Note: requires gdata 2.0 or later
+  * {{{google.py contacts add "Jim Raynor, jimmy@noreaster.com" contacts.csv}}}
+  * {{{google.py contacts delete --title Jerkface}}}
+  * {{{google.py contacts list name,email --title ".*bob.*" > the_bobs.csv}}}
 
 ==Docs==
-  * delete: Delete docs. {{{delete --title "Evidence"}}}
-  * edit: Edit or view a document. {{{edit --title "Shopping list" --editor vim}}}
-  * get: Download docs. {{{get --title "Homework [0-9]*"}}}
-  * list: List documents. {{{list title,url-direct --delimiter ": "}}}
-  * upload: Upload documents. {{{upload the_bobs.csv ~/work/docs_to_share/*}}}
+  * Note: requires gdata 2.0 or later
+  * {{{google.py docs delete --title "Evidence"}}}
+  * {{{google.py docs edit --title "Shopping list" --editor vim}}}
+  * {{{google.py docs get --title "Homework [0-9]*"}}}
+  * {{{google.py docs list title,url-direct --delimiter ": " # list docs}}}
+  * {{{google.py docs upload the_bobs.csv ~/work/docs_to_share/*}}}
 
 ==Picasa==
   * create: Create an album. {{{create --title "Summer Vacation 2009" --tags Vermont ~/photos/vacation2009/*}}}
