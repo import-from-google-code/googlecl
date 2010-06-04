@@ -1,6 +1,6 @@
 #summary Example commands and tasks GoogleCL can do.
 #labels Featured
-Also see the [Manual]
+Also see the [Manual] and the [SystemRequirements]
 
 ==Blogger==
   * {{{google.py blogger post --tags "GoogleCL, awesome" --title "Test Post" "I'm posting from the command line"}}}
