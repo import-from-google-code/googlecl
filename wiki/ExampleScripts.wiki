@@ -3,9 +3,10 @@
 Also see the [Manual]
 
 ==Blogger==
-  * {{{google.py blogger post --tags "GoogleCL, awesome" "I'm posting from the command line"}}}
+  * {{{google.py blogger post --tags "GoogleCL, awesome" --title "Test Post" "I'm posting from the command line"}}}
   * {{{google.py blogger post blogpost.txt}}}
   * {{{google.py blogger list title,url-site # List posts}}}
+  * {{{google.py blogger delete --title "Test Post"}}}
   * {{{google.py delete --title "Silly post number [0-9]*" # Delete posts matching regex}}}
   * {{{google.py tag --title "Dev post" --tags "Python, software" # label an existing post}}}
 
@@ -30,31 +31,15 @@ Also see the [Manual]
   * {{{google.py docs upload the_bobs.csv ~/work/docs_to_share/*}}}
 
 ==Picasa==
-  * create: Create an album. {{{create --title "Summer Vacation 2009" --tags Vermont ~/photos/vacation2009/*}}}
-  * delete: Delete photos or albums. {{{delete --title "Stupid album"}}}
-  * get: Download photos. {{{get --title "My Album" /path/to/download/folder}}}
-  * list: List photos or albums. {{{list title,url-direct --query "A tag"}}}
-  * post: Add photos to an album. {{{post --title Summer Vacation 2008" ~/old_photos/*.jpg}}}
-  * tag: Tag photos. {{{tag --title "Album I forgot to tag" --tags oops}}}
+  * {{{google.py picasa create --title "Vermont Test" --tags Vermont vermont.jpg}}}
+  * {{{google.py picasa delete --title "Vermont Test" # delete entire album}}}
+  * {{{google.py picasa get --title "Vermont Test" /path/to/download/folder}}}
+  * {{{google.py picasa list title,url-direct --query "A tag"}}}
+  * {{{google.py picasa post --title "Vermont Test" ~/old_photos/*.jpg # Add to an album}}}
+  * {{{google.py picasa tag --title "Vermont Test" --tags "places"}}}
 
 ==Youtube==
-  * delete: Delete videos. {{{delete --title ".*"}}}
-  * list: List your videos. {{{list}}}
-  * post: Post a video. {{{post --category Education --devtags GoogleCL killer_robots.avi}}}
-  * tag: Tag videos. {{{tag -n ".*robot.*" --tags robot}}}
-
-===The List task===
-The list task can be given additional arguments to specify what exactly is being listed. For example,
-
-{{{$ ./google.py <service> list style1,style2,style3 --delimiter ": "}}}
-
-will output those styles, in that order, with ": " as a delimiter. Valid values for `<`style1`>` etc. are:
-  * 'title' - title of the entry.
-  * 'url' - treated as 'url-direct' or 'url-site' depending on setting in preferences file.
-  * 'url-site' - url of the site associated with the entry.
-  * 'url-direct' - url directly to the resource.
-  * 'author' - author(s) of the entry.
-  * 'when' - "when" data for the entry (typically calendar-only, for start and end date of the event).
-  * 'where' - "where" data for the entry (typically calendar-only, for where the event takes place).
-
-The difference between 'url-site' and 'url-direct' is best exemplified by a picasa PhotoEntry: 'url-site' gives a link to the photo in the user's album, 'url-direct' gives a link to the image url. If 'url-direct' is specified but is not applicable, 'url-site' is placed in its stead, and vice-versa.
+  * {{{google.py youtube post --category Education --devtags GoogleCL killer_robots.avi}}}
+  * {{{google.py youtube delete --title "killer_robots.avi"}}}
+  * {{{google.py youtube list # list my videos}}}
+  * {{{google.py youtube tag -n ".*robot.*" --tags robot}}}
