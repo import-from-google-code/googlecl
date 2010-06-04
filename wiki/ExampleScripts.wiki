@@ -32,11 +32,11 @@ Also see the [Manual]
 
 ==Picasa==
   * {{{google.py picasa create --title "Vermont Test" --tags Vermont vermont.jpg}}}
-  * {{{google.py picasa delete --title "Vermont Test" # delete entire album}}}
   * {{{google.py picasa get --title "Vermont Test" /path/to/download/folder}}}
   * {{{google.py picasa list title,url-direct --query "A tag"}}}
   * {{{google.py picasa post --title "Vermont Test" ~/old_photos/*.jpg # Add to an album}}}
   * {{{google.py picasa tag --title "Vermont Test" --tags "places"}}}
+  * {{{google.py picasa delete --title "Vermont Test" # delete entire album}}}
 
 ==Youtube==
   * {{{google.py youtube post --category Education --devtags GoogleCL killer_robots.avi}}}
