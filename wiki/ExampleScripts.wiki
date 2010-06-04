@@ -1,19 +1,13 @@
 #summary Example commands and tasks GoogleCL can do.
 #labels Featured
-Some terminology:
-  * service - The Google service being used (Picasa, Blogger, etc.)
-  * task - The task that the service will be doing (tag, post, delete, etc.)
-
-You can also access help by typing {{{$ ./google.py help}}} or help on a specific service with {{{$ ./google.py help <service>}}}. For help with available options and what they mean, use {{{$ ./google.py --help}}}
-
-=Services=
-Each sub-section corresponds to a service, and each list item is a task that service can do. Each list item follows the format "task: description. {{{example}}}". Note that the example omits the initial {{{$ ./google.py <service>}}}
+Also see the [Manual]
 
 ==Blogger==
-  * delete: Delete posts. {{{delete --title "Silly post number [0-9]*"}}}
-  * list: List posts. {{{list title,url-site}}}
-  * post: Upload posts. {{{post --tags "GoogleCL, awesome" "Here's a really short post. The next posts will be much longer!" ~/blog/2010/may/*}}}
-  * tag: Label posts {{{tag --title "Dev post" --tags "Python, software"}}}
+  * {{{google.py blogger post --tags "GoogleCL, awesome" "I'm posting from the command line"}}}
+  * {{{google.py blogger post blogpost.txt}}}
+  * {{{google.py blogger list title,url-site # List posts}}}
+  * {{{google.py delete --title "Silly post number [0-9]*" # Delete posts matching regex}}}
+  * {{{google.py tag --title "Dev post" --tags "Python, software" # label an existing post}}}
 
 ==Calendar==
   * add: Add event to calendar. {{{add "Dinner party with George tomorrow at 6pm"}}}
