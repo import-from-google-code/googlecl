@@ -13,15 +13,6 @@ Code:
 }}}
 Blocking: No Gmail python client library, no write access to gmail (read-only feeds), difficult to list photos unless you know precise tags / name of photo.
 
-===Upload photos in a directory tree to picasa and create a spreadsheet of them===
-Code:
-{{{
-> picasa create --album new_album /path/to/photos/*.jpg
-> picasa list title,url-direct --album new_album --delimiter , > new_album.csv
-> docs upload new_album.csv
-}}}
-Blocking: list command as written will list the album data not the data of photos inside
-
 =Brainstorming=
 Things that would be really super cool if GoogleCL could do them. They may be totally feasible given a decent amount of time, or insanely difficult.
 
