@@ -4,7 +4,7 @@ For most people using Ubuntu Hardy (8.04) or newer, installation should be very 
 
    * sudo apt-get install python-gdata
    * [download .deb package]
-   * sudo dpkg -i googlecl*.deb
+   * sudo dpkg -i googlecl`*`.deb
 
 However, Ubuntu only comes with gdata 1.2, so you may see a message like:
 
