@@ -1,19 +1,13 @@
 #summary What you need in order to use googleCL
 
-To use googleCL, you'll need python2.5 at a minimum.
+For most people using Ubuntu Hardy (8.04) or newer, installation should be very simple:
 
-You'll also find that some commands will fail unless you have gdata2.0 installed.
+   * sudo apt-get install python-gdata
+   * [download .deb package]
+   * sudo dpkg -i googlecl*.deb
 
-Unfortunately, Ubuntu hardy (8.04) and lucid (10.04) don't come with gdata2.0.
+However, Ubuntu only comes with gdata 1.2, so you may see a message like:
 
-The following services work with Ubuntu Hardy using the stock python-gdata and python2.5 packages:
+   * "Editing documents is not supported for gdata-python-client < 2.0"
 
-   * blogger
-   * calendar add
-
-The following services work with Ubuntu Lucid using the stock python-gdata and python2.6 packages:
-
-   * blogger
-   * calendar
-   * contacts
-   * youtube
+If you need to use tasks unsupported by gdata-1.2, you'll need to manually install a newer version of the gdata and gdata python libraries.
