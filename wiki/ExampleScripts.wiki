@@ -22,7 +22,6 @@ Also see the [Manual] and the [SystemRequirements]
   * {{{google contacts delete --title "J. Random Hacker"}}}
 
 ==Docs==
-  * Note: requires gdata 2.0 or later
   * {{{google docs delete --title "Evidence"}}}
   * {{{google docs edit --title "Shopping list" --editor vim}}}
   * {{{google docs get --title "Homework [0-9]*"}}}
