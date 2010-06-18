@@ -1,5 +1,5 @@
 #summary What you need in order to use GoogleCL
-#labels Featured
+#labels Featured,Phase-Deploy
 
 =Linux .deb package=
 
@@ -33,9 +33,13 @@ Trent Mick says that now that we've uploaded it, you should be able to install u
 
 [http://www.reddit.com/r/programming/comments/cgi57/introducing_the_google_command_line_tool/c0seufq Someone] on reddit says that it's available via macports:
 
-{{{sudo port install googlecl}}}
+   * {{{sudo port install googlecl}}}
 
 "If it's not there, run 'sudo port install selfupdate' first, then the above command."
+
+And someone [http://www.reddit.com/r/programming/comments/cgi57/introducing_the_google_command_line_tool/c0sew4y else] tells us you can install it using homebrew:
+
+   * {{{brew install googlecl}}}
 
 =Windows=
 
