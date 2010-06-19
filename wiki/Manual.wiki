@@ -28,11 +28,11 @@ Each sub-section corresponds to a service, and each list item is a task that ser
 
 ==Docs==
   * delete: Delete docs. {{{delete --title "Evidence"}}}
-  * edit: Edit or view a document. {{{edit --title "Shopping list" --editor vim}}}
-  * get: Download docs. {{{get --title "Homework [0-9]*"}}}
   * list: List documents. {{{list title,url-direct --delimiter ": "}}}
   * upload: Upload documents. {{{upload the_bobs.csv ~/work/docs_to_share/*}}}
-
+gdata-python-client >= 1.3.0 ONLY
+  * edit: Edit or view a document. {{{edit --title "Shopping list" --editor vim}}}
+  * get: Download docs. {{{get --title "Homework [0-9]*"}}}
 ==Picasa==
   * create: Create an album. {{{create --title "Summer Vacation 2009" --tags Vermont ~/photos/vacation2009/*}}}
   * delete: Delete photos or albums. {{{delete --title "Stupid album"}}}
