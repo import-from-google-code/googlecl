@@ -4,7 +4,9 @@ Some terminology:
   * service - The Google service being used (Picasa, Blogger, etc.) in all lowercase.
   * task - The task that the service will be doing (tag, post, delete, etc.)
 
-You can also access help by typing {{{$ ./google.py help}}} or help on a specific service with {{{$ ./google help <service>}}}. For help with available options and what they mean, use {{{$ ./google --help}}}
+You can also access help by typing {{{$ google.py help}}} or help on a specific service with {{{$ google help <service>}}}. For help with available options and what they mean, use {{{$ google --help}}}
+
+Note that the first time you use a service (like picasa or youtube), you'll have to use a web browser to grant access.  After that, GoogleCL will cache an oauth token in a config directory so that you don't have to login again for that service.
 
 =Services=
 Each sub-section corresponds to a service, and each list item is a task that service can do. Each list item follows the format "task: description. {{{example}}}". Note that the example omits the initial {{{$ ./google <service>}}}
