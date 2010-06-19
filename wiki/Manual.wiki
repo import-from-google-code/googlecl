@@ -64,3 +64,6 @@ will output those styles, in that order, with ": " as a delimiter. Valid values 
   * 'where' - "where" data for the entry (typically calendar-only, for where the event takes place).
 
 The difference between 'url-site' and 'url-direct' is best exemplified by a picasa PhotoEntry: 'url-site' gives a link to the photo in the user's album, 'url-direct' gives a link to the image url. If 'url-direct' is specified but is not applicable, 'url-site' is placed in its stead, and vice-versa.
+
+=Configuration=
+GoogleCL also incorporates a configuration file that you can use to customize its behavior, including automatic determination of command line options. Take a look at ConfigurationOptions for documentation on the configuration file.
