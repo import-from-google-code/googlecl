@@ -1,6 +1,6 @@
 #summary Example commands and tasks GoogleCL can do.
 #labels Featured
-Also see the [Manual] and the [SystemRequirements]
+Also see the [Manual] and the [SystemRequirements].  Note that (only) the first time you use each service, you'll need to grant authorization from a web browser.
 
 ==Blogger==
   * {{{google blogger post --tags "GoogleCL, awesome" --title "Test Post" "I'm posting from the command line"}}}
