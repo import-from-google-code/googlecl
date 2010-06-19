@@ -23,10 +23,11 @@ Also see the [Manual] and the [SystemRequirements]
 
 ==Docs==
   * {{{google docs delete --title "Evidence"}}}
-  * {{{google docs edit --title "Shopping list" --editor vim}}}
-  * {{{google docs get --title "Homework [0-9]*"}}}
   * {{{google docs list title,url-direct --delimiter ": " # list docs}}}
   * {{{google docs upload the_bobs.csv ~/work/docs_to_share/*}}}
+gdata-python-client >= 1.3.0 ONLY
+  * {{{google docs edit --title "Shopping list" --editor vim}}}
+  * {{{google docs get --title "Homework [0-9]*"}}}
 
 ==Picasa==
   * {{{google picasa create --title "Vermont Test" --tags Vermont vermont.jpg}}}
