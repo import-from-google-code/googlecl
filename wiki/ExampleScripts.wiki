@@ -41,3 +41,9 @@ Also see the [Manual] and the [SystemRequirements]
   * {{{google youtube delete --title "killer_robots.avi"}}}
   * {{{google youtube list # list my videos}}}
   * {{{google youtube tag -n ".*robot.*" --tags robot}}}
+
+==Search, Buzz, Gmail, etc.==
+
+We'd love to support more Google services with GoogleCL!, but we're currently limited by the [http://code.google.com/apis/gdata/docs/directory.html availability of gdata APIs].
+
+Before hacking in our own services, it's probably best if we encourage the gdata teams to add new services (and python interfaces to those new APIs!) first. 
