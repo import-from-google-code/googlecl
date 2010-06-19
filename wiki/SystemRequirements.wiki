@@ -16,11 +16,18 @@ Or, mariuz tells us below that you can simply do this to have the dependencies a
 
 To use GoogleCL with Ubuntu Hardy (8.04), you'll need to install a recent version of the python gdata libraries by hand.  Hardy users won't be able to use the .deb, but GoogleCL runs just fine from the .tar.gz package, no installation necessary, once you have the approprate gdata support in place.  Just download the .tar.gz package, cd src/, and try ./google --help
 
-Note that all versions of Ubuntu only come standard with gdata 1.2, so you may see a message like:
+===python-gdata version===
+Note that most versions of Ubuntu only come standard with gdata 1.2, so you may see a message like:
 
    * "Editing documents is not supported for gdata-python-client < 2.0"
 
-If you need to use tasks unsupported by gdata-1.2, you'll need to manually install a newer version of the gdata and gdata python libraries.
+If you need to use tasks unsupported by gdata-1.2, you'll need to manually install a newer version of the gdata and gdata python libraries.  
+
+Or, you could try installing the python-gdata 2.0 .deb file for the upcoming 10.10 (maverick meerkat) release:
+
+sudo dpkg -i https://launchpad.net/ubuntu/+archive/primary/+files/python-gdata_2.0.8-1.1_all.deb
+
+It seemed to work for me on a Lucid machine, but Your Mileage May Vary.
 
 =Pypi (cheeseshop)=
 
