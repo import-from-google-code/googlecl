@@ -9,7 +9,7 @@ Each option description follows the format {{{<name>: [<values>]}}} description
 ===All sections===
 Each of these values can be found in any section. The service being run will try to find the option in its own section, and failing that, in the GENERAL section.
 
- * {{{list_style: [<style>,<style>,...]}}} Comma-separated (no spaces) list of attributes to print out when using the 'list' task and no styles are specified on the command line. For a list of styles, see the README.
+ * {{{list_style: [<style>,<style>,...]}}} Comma-separated (no spaces) list of attributes to print out when using the 'list' task and no styles are specified on the command line. For a list of styles, see the README or the [http://code.google.com/p/googlecl/wiki/Manual#The_List_task Manual].
  * {{{<option>: [<string>]}}} You can specify any option in the config file to use as a "general" case. When a command-line option is required (for example the username, or the title of an album created with Picasa), and nothing is passed in via the command line, this value will be used.
 
 ===Picasa===
