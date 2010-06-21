@@ -43,3 +43,5 @@ $ TZ='[SELECTED_TIME_ZONE]'; export TZ;
 $ sudo hwclock --systohc
 }}}
 "and that 'time error' gone "
+
+Issue 55 is currently tracking progress on this issue.
