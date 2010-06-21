@@ -1,6 +1,10 @@
 #summary What you need in order to use GoogleCL
 #labels Featured,Phase-Deploy
 
+=Dependencies=
+The only external package you need is gdata-python-client (aka python-gdata) >= 1.2.4
+Some features (namely downloading and editing with Docs) have only been tested for versions >= 2, but >= 1.3 may work just fine.
+
 =Linux .deb package=
 
 For most people using Ubuntu Karmic (9.10) or newer, installation should be very simple:
