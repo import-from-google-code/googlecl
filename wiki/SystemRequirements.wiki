@@ -43,9 +43,13 @@ Trent Mick says that now that we've uploaded it, you should be able to install u
 
 If it's not there, run 'sudo port selfupdate', then try again.
 
-And someone [http://www.reddit.com/r/programming/comments/cgi57/introducing_the_google_command_line_tool/c0sew4y else] tells us you can install it using homebrew:
+bodo.tasche reports:
+"Brew has removed the googlecl package because it is part of pip. To install googlecl without MacPorts, use:"
 
-   * {{{brew install googlecl}}}
+{{{
+brew install pip
+pip install google
+}}}
 
 =Windows=
 
