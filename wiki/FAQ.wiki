@@ -30,3 +30,16 @@ You need a later version of the [http://code.google.com/p/gdata-python-client/ g
 
 === "ValueError: Invalid resource id" when using Docs ===
 Upgrading to gdata 2.0.12 seems to fix this. It has been seen in versions as late as 2.0.2.
+
+=== Timestamp too far from current time ===
+pigritor reports:
+"yep. problem was in system and kernel clock.
+I read this: http://en.gentoo-wiki.com/wiki/Time_Synchronization
+then:"
+{{{
+$ sudo htpdate -ds google.com;
+$ sudo tzselect;
+$ TZ='[SELECTED_TIME_ZONE]'; export TZ;
+$ sudo hwclock --systohc
+}}}
+"and that 'time error' gone "
