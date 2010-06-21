@@ -1,0 +1,29 @@
+#summary Frequently asked questions and troubleshooting
+
+= FAQ =
+
+=== Will you support XXX? ===
+We're building on top of [http://code.google.com/p/gdata-python-client/ gdata-python-client], so if you don't see it supported there, we won't be supporting it in the foreseeable future.
+
+=== How do I apply patches? ===
+If you're as impatient as I am (not recommended), and on some flavor of Linux, try this:
+{{{$ cd /path/to/python/libraries
+$ sudo patch -p0 -i /path/to/patch_file}}}
+
+I *really* recommend reading a proper tutorial on the `patch` command first, though. How about [http://www.linuxtutorialblog.com/post/introduction-using-diff-and-patch-tutorial this one]?
+
+The path used in the `cd` command depends on your operating system and how GoogleCL was installed. For me (Ubuntu 9.10, using setup.py) it is `/usr/local/lib/python2.6/dist-packages`
+
+For Windows, you need to download a patch tool. You could also check out the svn repository by downloading an svn tool (try TortoiseSVN) and following the instructions [http://code.google.com/p/googlecl/source/checkout here]. The repository will have all patches from issues marked "fixed", but has the potential to be more unstable than the releases in the Downloads section.
+
+=== How do I uninstall GoogleCL? ===
+Why would I tell you that? :P
+
+Installing from source with `python setup.py install` means you probably need to remove files by hand. [http://stackoverflow.com/questions/1550226/python-setup-py-uninstall This] provides some helpful instructions on how to do that.
+
+If you used the .deb, try `sudo dkpg -r /path/to/deb_file`. Replacing the -r with -P will also remove configuration files.
+
+= Troubleshooting =
+
+=== no attribute 'SetOAuthInputParameters' ===
+You need a later version of the [http://code.google.com/p/gdata-python-client/ gdata python library]. The earliest version we tested with was 1.2.4.
