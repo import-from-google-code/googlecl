@@ -18,10 +18,16 @@ Each sub-section corresponds to a service, and each list item is a task that ser
   * tag: Label posts {{{tag --title "Dev post" --tags "Python, software"}}}
 
 ==Calendar==
-  * add: Add event to calendar. {{{add "Dinner party with George tomorrow at 6pm"}}}
+  * add: Add event to calendar. The text you use is treated as if it were entered using the Quick Add feature of Google Calendar. {{{add "Dinner party with George tomorrow at 6pm"}}}
   * delete: Delete an event. {{{delete --cal "GoogleCL dev cal" --title "Release.*"}}}
-  * list: List events. {{{list --date 2010-06-01,2010-06-30}}}
-  * today: List events for today only. {{{today}}}
+  * list: List events. Omitting --date is equivalent to --date today,tomorrow. {{{list --date 2010-06-01,2010-06-30}}}
+  * today: List events for the next 24 hours. {{{today}}}
+
+The --date option for calendar will accept the following formats, returning the following events:
+ * YYYY-MM-DD: Events on that day
+ * YYYY-MM-DD,: Events on and after that day
+ * YYYY-MM-DD,YYYY-MM-DD: Events between the first day and the last day, EXCLUDING the last day.
+ * ,YYYY-MM-DD: Events before that day, EXCLUDING that day.
 
 ==Contacts==
   * add: Add contacts. {{{add "Jim Raynor, jimmy@noreaster.com" contacts.csv}}}
