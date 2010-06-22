@@ -49,17 +49,15 @@ $ sudo hwclock --systohc
 
 Issue 55 is currently tracking progress on this issue.
 
-=== ... not supported for gdata-python-client < 2.0 ===
-Some functionality depends on later versions of the gdata-python-client project (aka python-gdata).
-
-If you have installed version 2.0.x but are still getting this message, the older version may still be lurking on your machine. Ubuntu/Debian users can use
+=== GoogleCL behaves as if an earlier version of gdata is installed ===
+If you have installed version 2.0.x but are still getting bugs/issues tied to earlier versions of gdata, the older version may still be lurking on your machine. Ubuntu/Debian users can use
 {{{
 $ dpkg --list | grep gdata
 ... snipped ...
 ii  python-gdata                               1.2.4-0ubuntu2                             Google Data Python client library
 }}}
 
-If you see that, then an early version is still installed. You can get rid of it with `dpkg -r python-gdata`
+If you see that, then an early version (1.2.4, in fact) is still installed. You can get rid of it with `dpkg -r python-gdata`
 
 Also check the directories in your PYTHONPATH:
 {{{
