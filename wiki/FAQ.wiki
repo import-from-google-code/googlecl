@@ -7,8 +7,11 @@ We're building on top of [http://code.google.com/p/gdata-python-client/ gdata-py
 
 === How do I apply patches? ===
 If you're as impatient as I am (not recommended), and on some flavor of Linux, try this:
-{{{$ cd /path/to/python/libraries
-$ sudo patch -p0 -i /path/to/patch_file}}}
+
+{{{
+$ cd /path/to/python/libraries
+$ sudo patch -p0 -i /path/to/patch_file
+}}}
 
 I *really* recommend reading a proper tutorial on the `patch` command first, though. How about [http://www.linuxtutorialblog.com/post/introduction-using-diff-and-patch-tutorial this one]?
 
@@ -21,7 +24,7 @@ Why would I tell you that? :P
 
 Installing from source with `python setup.py install` means you probably need to remove files by hand. [http://stackoverflow.com/questions/1550226/python-setup-py-uninstall This] provides some helpful instructions on how to do that.
 
-If you used the .deb, try `sudo dkpg -r /path/to/deb_file`. Replacing the -r with -P will also remove configuration files.
+If you used the .deb, try `sudo dpkg -r /path/to/deb_file`. Replacing the -r with -P will also remove configuration files.
 
 = Troubleshooting =
 
