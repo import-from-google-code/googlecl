@@ -48,7 +48,7 @@ bodo.tasche reports:
 
 {{{
 brew install pip
-pip install google
+pip install googlecl
 }}}
 
 =Windows=
