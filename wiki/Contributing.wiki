@@ -7,4 +7,6 @@ The easiest way to help is to use the program and file an [http://code.google.co
 ==Developing==
 We currently have a very loose structure for contributing code. The easiest way to contribute code is to find (or submit) an issue in the [http://code.google.com/p/googlecl/issues/list Issues Tracker], write code that addresses the issue, then upload a subversion diff that patches the issue. Be sure to check out the [http://groups.google.com/group/googlecl-discuss Discussion group] and [StyleGuide]
 
-If you find yourself constantly submitting and fixing issues, you may want to become a committer. Post a message to that effect on the discussion group, and one of the owners will (probably) add you.
+Before we can use your patch, though, you have to sign something.
+ * If you are an individual writing original source code and you're sure you own the intellectual property, then you'll need to sign an [http://code.google.com/legal/individual-cla-v1.0.html individual CLA].
+ * If you work for a company that wants to allow you to contribute your work to Google Data Python Client Library, then you'll need to sign a [http://code.google.com/legal/corporate-cla-v1.0.html corporate CLA]
