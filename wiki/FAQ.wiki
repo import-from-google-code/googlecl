@@ -48,3 +48,24 @@ $ sudo hwclock --systohc
 "and that 'time error' gone "
 
 Issue 55 is currently tracking progress on this issue.
+
+=== ... not supported for gdata-python-client < 2.0 ===
+Some functionality depends on later versions of the gdata-python-client project (aka python-gdata).
+
+If you have installed version 2.0.x but are still getting this message, the older version may still be lurking on your machine. Ubuntu/Debian users can use
+{{{
+$ dpkg --list | grep gdata
+... snipped ...
+ii  python-gdata                               1.2.4-0ubuntu2                             Google Data Python client library
+}}}
+
+If you see that, then an early version is still installed. You can get rid of it with `dpkg -r python-gdata`
+
+Also check the directories in your PYTHONPATH:
+{{{
+$ echo $PYTHONPATH
+:/usr/local/lib/python2.6/site-packages:/usr/local/lib/python2.6/dist-packages
+$ ls /usr/local/lib/python2.6/site-packages gdata*
+}}}
+
+If PYTHONPATH is not set for you, or its directories do not contain the new gdata, set it to point at the directory where your newer version of gdata resides (`export PYTHONPATH=$PYTHONPATH:/path/to/directory`)
