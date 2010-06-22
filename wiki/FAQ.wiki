@@ -49,6 +49,17 @@ $ sudo hwclock --systohc
 
 Issue 55 is currently tracking progress on this issue.
 
+=== Won't work from behind a proxy ===
+If you're seeing a stack trace ending in
+{{{
+File "/usr/lib/python2.6/site-packages/atom/http.py", line 240, in _prepare_connection
+    p_sock.connect((proxy_url.host, int(proxy_url.port)))
+  File "<string>", line 1, in connect
+TypeError: coercing to Unicode: need string or buffer, NoneType found
+}}}
+
+upgrading to gdata-python-client 2.0.10 seems to work for most or all users.
+
 === GoogleCL behaves as if an earlier version of gdata is installed ===
 If you have installed version 2.0.x but are still getting bugs/issues tied to earlier versions of gdata, the older version may still be lurking on your machine. Ubuntu/Debian users can use
 {{{
