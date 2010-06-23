@@ -1,14 +1,6 @@
 #summary What you need in order to use GoogleCL
 #labels Featured,Phase-Deploy
 
-=News: setup.py broken? (22 June 2010)=
-
-A quick note: it looks like setup.py is not correctly installing the modules needed to work correctly.  We're currently tracking the problem down.  Please let us know if you can find the error in the setup.py script.  
-
-Meanwhile, the .deb and other installation options seem to work fine.
-
-Update: this seems to have something to do with python2.5, since installs using python2.6 seem to work okay for us.
-
 =Dependencies=
 The only external package you need is gdata-python-client (aka python-gdata) >= 1.2.4
 Some features (namely downloading and editing with Docs) have only been tested for versions >= 2, but >= 1.3 may work just fine.
