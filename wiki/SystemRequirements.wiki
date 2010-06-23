@@ -55,3 +55,7 @@ pip install googlecl
 
 Isaac Truett wrote up a HOWTO on his blog:
 http://publicint.blogspot.com/2010/06/setup-googlecl-on-winxp.html
+
+=FreeBSD=
+
+There is a FreeBSD port available under net/googlecl
