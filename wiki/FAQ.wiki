@@ -40,9 +40,9 @@ pigritor reports:
 I read this: http://en.gentoo-wiki.com/wiki/Time_Synchronization
 then:"
 {{{
-$ sudo htpdate -ds google.com;
+$ sudo ntpdate -ds google.com;
 $ sudo tzselect;
-$ TZ='[SELECTED_TIME_ZONE]'; export TZ;
+$ TZ='[SELECTED_TIME_ZONE]'; export TZ;  #Substitute your timezone, for example, 'America/Toronto'
 $ sudo hwclock --systohc
 }}}
 "and that 'time error' gone "
