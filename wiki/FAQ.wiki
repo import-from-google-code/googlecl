@@ -26,6 +26,9 @@ Installing from source with `python setup.py install` means you probably need to
 
 If you used the .deb, try `sudo dpkg -r /path/to/deb_file`. Replacing the -r with -P will also remove configuration files.
 
+=== Why isn't GoogleCL showing up in my "Authorized websites" list? ===
+This process apparently takes a while for installed applications. If nothing has shown up after 3 hours, please file an issue.
+
 = Troubleshooting =
 
 === no attribute 'SetOAuthInputParameters' ===
