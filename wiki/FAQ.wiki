@@ -63,6 +63,13 @@ TypeError: coercing to Unicode: need string or buffer, NoneType found
 
 upgrading to gdata-python-client 2.0.10 seems to work for most or all users.
 
+maarecek mentions:
+"I had to export proxy in format http://myproxy:8080 instead of only myproxy:8080"
+{{{
+set http_proxy=http://myproxy:8080
+set https_proxy=https://myproxy:8080
+}}}
+
 === GoogleCL behaves as if an earlier version of gdata is installed ===
 If you have installed version 2.0.x but are still getting bugs/issues tied to earlier versions of gdata, the older version may still be lurking on your machine. Ubuntu/Debian users can use
 {{{
