@@ -1,0 +1,18 @@
+#summary Expansions / improvements on GoogleCL from other sources
+
+WARNING: Tips / links / claims found on this page haven't necessarily been tested by anyone affiliated with Google or the GoogleCL project. If you have a problem using one of these expansions, your best bet is to find and contact the original author.
+
+= Devices =
+Reports of devices that will run GoogleCL.
+
+==Out-of-the-box==
+ * [http://groups.google.com/group/googlecl-discuss/browse_thread/thread/5a983dcc0df4f9b4 Nokia 810 Internet Tablet]
+
+==Do-it-yourself==
+
+=== Android ===
+A little bit of hackery, and your Android will speak your calendar to you. A guide can be found [http://publicint.blogspot.com/2010/06/build-talking-calendar-with-googlecl.html here]
+
+=Other=
+===Shell completion===
+[http://code.google.com/p/googlecl/issues/detail?id=73#c1 This] comment contains a bash completion script, and so does [http://github.com/bobthecow/googlecl-completion this] github repo. To install one, copy it to /etc/bash_completion.d
