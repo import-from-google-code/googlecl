@@ -5,6 +5,10 @@
 === Will you support XXX? ===
 We're building on top of [http://code.google.com/p/gdata-python-client/ gdata-python-client], so if you don't see it supported there, we won't be supporting it in the foreseeable future.
 
+If you want a service that isn't supported by gdata-python-client, check their [http://code.google.com/p/gdata-python-client/issues/list issue tracker] for a request to support said service. If the issue exists, star it. If not, submit a new issue asking for them to support it.
+
+To request a feature for a service that we do support, file an issue on our [http://code.google.com/p/googlecl/issues/list issue tracker], following the same steps as above.
+
 === How do I apply patches? ===
 If you're as impatient as I am (not recommended), and on some flavor of Linux, try this:
 
