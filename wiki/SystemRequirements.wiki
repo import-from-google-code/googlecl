@@ -54,7 +54,12 @@ pip install googlecl
 }}}
 
 =Windows=
+===0.9.8===
+The zip file contains an executable called "google" that you can run from inside that folder. Running it will bring up the interactive shell prompt (`> `) where you can enter commands such as `docs list` or `blogger post "Hello World!"`
 
+If it crashes or does nothing, you may need a DLL from Microsoft downloaded from [http://www.microsoft.com/downloads/details.aspx?familyid=32bc1bee-a3f9-4c13-9c99-220b62a191ee&displaylang=en here].
+
+===0.9.7 and earlier===
 Isaac Truett wrote up a HOWTO on his blog:
 http://publicint.blogspot.com/2010/06/setup-googlecl-on-winxp.html
 
