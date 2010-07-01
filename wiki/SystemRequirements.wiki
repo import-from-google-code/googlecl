@@ -57,7 +57,7 @@ pip install googlecl
 ===0.9.8===
 The zip file contains an executable called "google" that you can run from inside that folder. Running it will bring up the interactive shell prompt (`> `) where you can enter commands such as `docs list` or `blogger post "Hello World!"`
 
-If it crashes or does nothing, you may need a DLL from Microsoft downloaded from [http://www.microsoft.com/downloads/details.aspx?familyid=32bc1bee-a3f9-4c13-9c99-220b62a191ee&displaylang=en here].
+If it crashes, does nothing, or says "MCVCR71.dll not found" you may need a DLL from Microsoft installed via [http://www.microsoft.com/downloads/details.aspx?familyid=32bc1bee-a3f9-4c13-9c99-220b62a191ee&displaylang=en this tool].
 
 ===0.9.7 and earlier===
 Isaac Truett wrote up a HOWTO on his blog:
