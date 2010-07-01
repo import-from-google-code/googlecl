@@ -15,6 +15,7 @@ Also see the [Manual] and the [SystemRequirements].  Note that (only) the first 
   * {{{google calendar today # List events for today only. }}}
   * {{{google calendar list --date 2010-06-01,2010-06-30 # List events.}}}
   * {{{google calendar delete --title "Dinner party with George" # Delete an event.}}}
+  * {{{google calendar today list --cal .*  | egrep  '\[.*\]'}}} # List all calendars}}}
 
 ==Contacts==
   * {{{google contacts add "J. Random Hacker, jrandom@example.com"}}}
