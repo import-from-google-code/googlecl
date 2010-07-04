@@ -63,7 +63,7 @@ Tasks:
   * delete: Delete photos or albums. `delete --title "Stupid album"`
   * get: Download photos. `get --title "My Album" /path/to/download/folder`
   * list: List photos or albums. `list title,url-direct --query "A tag"`
-  * post: Add photos to an album. `post --title Summer Vacation 2008" ~/old_photos/*.jpg`
+  * post: Add photos to an album. `post --title "Summer Vacation 2008" ~/old_photos/*.jpg`
   * tag: Tag photos. `tag --title "Album I forgot to tag" --tags oops`
 
 ==YouTube==
