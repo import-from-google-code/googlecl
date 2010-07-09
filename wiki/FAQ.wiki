@@ -9,6 +9,15 @@ If you want a service that isn't supported by gdata-python-client, check their [
 
 To request a feature for a service that we do support, file an issue on our [http://code.google.com/p/googlecl/issues/list issue tracker], following the same steps as above.
 
+=== How do I use the most recent version? / How do I run the code from the repository or trunk? ===
+The svn repository always has the most recent patches already applied, though it may also have new and exciting bugs. If you're not familiar with subversion, you may want to read up on it [http://svnbook.red-bean.com/nightly/en/svn.intro.quickstart.html here].
+  * Install svn if you don't have it. For Windows, try [http://tortoisesvn.tigris.org/ TortoiseSVN]
+  * Checkout the trunk with `svn checkout http://googlecl.googlecode.com/svn/trunk/ googlecl`
+  * Navigate to googlecl/src
+  * Run the file named "google" either by passing it as an argument to your python executable (`$ python google`) or making it executable.
+
+Provided Python can find the gdata libraries, that's it. Isn't Python great?
+
 === How do I apply patches? ===
 If you're as impatient as I am (not recommended), and on some flavor of Linux, try this:
 
