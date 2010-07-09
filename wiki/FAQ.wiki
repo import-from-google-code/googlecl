@@ -46,6 +46,14 @@ This process apparently takes a while for installed applications. If nothing has
 Add single quotes and double quotes around the name. For example:
 {{{$ google calendar add '"12345"'}}}
 
+=== How do I convert new-version documents to work with GoogleCL? ===
+The client libraries still have a few issues with the new document version that Google just rolled out. Here's how to convert those pesky docs using the version of GoogleCL in the repository (or, if I haven't updated this yet, whatever version is after 0.9.8)
+  * Disable new-version documents. To do this, go to Settings->Documents settings->Editing, then uncheck the box that says "New version of Google documents." Settings should be a link in the upper right corner of the window.
+  * IF you haven't already tried to update the document, download the new-style document. (`google docs get -n "name of document"`)
+  * Upload the document. (`google docs upload path/to/document -n "name of document"`)
+  * If you're cautious, verify the document looks good using the web browser.
+  * Delete the old document (optional, but recommended).
+
 = Troubleshooting =
 
 === no attribute 'SetOAuthInputParameters' ===
