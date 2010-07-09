@@ -33,6 +33,10 @@ If you used the .deb, try `sudo dpkg -r /path/to/deb_file`. Replacing the -r wit
 === Why isn't GoogleCL showing up in my "Authorized websites" list? ===
 This process apparently takes a while for installed applications. If nothing has shown up after 3 hours, please file an issue.
 
+=== How do I make calendar events with numerical titles? ===
+Add single quotes and double quotes around the name. For example:
+{{{$ google calendar add '"12345"'}}}
+
 = Troubleshooting =
 
 === no attribute 'SetOAuthInputParameters' ===
