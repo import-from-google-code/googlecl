@@ -54,6 +54,33 @@ The client libraries still have a few issues with the new document version that 
   * If you're cautious, verify the document looks good using the web browser.
   * Delete the old document (optional, but recommended).
 
+=== Why can't I upload XXX to Docs? ===
+For all users, the version of gdata that you are using limits the types of documents you can upload. The list of extension: MIME content types are given below.
+
+gdata-1.2.4:
+  * CSV: text/csv
+  * TSV: text/tab-separated-values
+  * TAB: text/tab-separated-values
+  * DOC: application/msword
+  * ODS: application/x-vnd.oasis.opendocument.spreadsheet
+  * ODT: application/vnd.oasis.opendocument.text
+  * RTF: application/rtf
+  * SXW: application/vnd.sun.xml.writer
+  * TXT: text/plain
+  * XLS: application/vnd.ms-excel
+  * PPT: application/vnd.ms-powerpoint
+  * PPS: application/vnd.ms-powerpoint
+  * HTM: text/html
+  * HTML: text/html
+
+As of gdata-2.0.10, the following were added:
+  * DOCX: (application/vnd.openxmlformats-officedocument, wordprocessingml.document)
+  * XLSX: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  * PDF: application/pdf
+  * PNG: image/png
+  * ZIP: application/zip
+  * SWF: application/x-shockwave-flash
+
 = Troubleshooting =
 
 === no attribute 'SetOAuthInputParameters' ===
