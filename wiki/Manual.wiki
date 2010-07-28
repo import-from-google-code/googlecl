@@ -23,13 +23,16 @@ Tasks:
   * post: Upload posts. `post --tags "GoogleCL, awesome" "Here's a really short post. The next posts will be much longer!" ~/blog/2010/may/*`
   * tag: Label posts `tag --title "Dev post" --tags "Python, software"`
 
+Note: You can use --owner to specify another user's blog when listing posts, but you have to provide a Blogger ID (the number in http://www.blogger.com/profile/NUMBER), not the Google account name.
+
 ==Calendar==
 Common options:
   * cal: Specify the name of the calendar. This can be a regular expression. If this option is not given, the primary calendar is used.
   * date: Specify a date, or date range. Dates are inclusive, so `--date 2010-06-23,2010-06-25` will include the 23rd, 24th, and 25th of June.
+  * reminder: Add all of the default reminders to an added event with given warning time. Values are in minutes by default, larger time increments can be specified with h (hour) d (day) or w (week). For example: --reminder 2h will make one or more reminders be sent two hours before the event being added.
 
 Tasks:
-  * add: Add event to calendar. `add "Dinner party with George tomorrow at 6pm"`
+  * add: Add event to calendar. `add "Dinner party with George tomorrow at 6pm" --reminder 1h`
   * delete: Delete an event. `delete --cal "GoogleCL dev cal" --title "Release.*"`
   * list: List events. `list --date 2010-06-01,2010-06-30`
   * today: List events for today only. `today`
@@ -58,6 +61,9 @@ Tasks:
   * upload: Upload documents. `upload the_bobs.csv ~/work/docs_to_share`
 
 ==Picasa==
+Common options:
+  * owner: Owner of the album you want to deal with. This will work with all tasks but create and delete. For example, you can add to collaborative albums this way: `post --title "our shared album" --owner "annie.adams" photo.jpg`
+
 Tasks:
   * create: Create an album. `create --title "Summer Vacation 2009" --tags Vermont ~/photos/vacation2009/*`
   * delete: Delete photos or albums. `delete --title "Stupid album"`
