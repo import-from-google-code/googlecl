@@ -102,9 +102,13 @@ $ sudo hwclock --systohc
 }}}
 "and that 'time error' gone "
 
-Issue 55 is currently tracking progress on this issue.
+Issue 55 has some more solutions for Linux-based systems, Issue 226 for Windows.
 
 === Won't work from behind a proxy ===
+The short answer seems to be "Make sure http:// and https:// are included in your proxy settings." Using just myproxy:portnumber may work for other programs, but gdata requires the protocol as well.
+
+You may want to check out [http://code.google.com/p/gdatacopier/wiki/ProxySupport these steps], which claim to be generic to the gdata-api.
+
 If you're seeing a stack trace ending in
 {{{
 File "/usr/lib/python2.6/site-packages/atom/http.py", line 240, in _prepare_connection
@@ -113,16 +117,9 @@ File "/usr/lib/python2.6/site-packages/atom/http.py", line 240, in _prepare_conn
 TypeError: coercing to Unicode: need string or buffer, NoneType found
 }}}
 
-upgrading to gdata-python-client 2.0.10 seems to work for most or all users.
+upgrading to gdata-python-client 2.0.10 works for most or all users.
 
-You may also want to check out [http://code.google.com/p/gdatacopier/wiki/ProxySupport these steps], which claim to be generic to the gdata-api.
-
-maarecek mentions:
-"I had to export proxy in format http://myproxy:8080 instead of only myproxy:8080"
-{{{
-set http_proxy=http://myproxy:8080
-set https_proxy=https://myproxy:8080
-}}}
+Issue 44 and Issue 220 contain more information.
 
 === GoogleCL behaves as if an earlier version of gdata is installed ===
 If you have installed version 2.0.x but are still getting bugs/issues tied to earlier versions of gdata, the older version may still be lurking on your machine. Ubuntu/Debian users can use
