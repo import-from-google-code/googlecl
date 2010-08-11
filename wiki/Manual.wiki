@@ -73,6 +73,25 @@ Tasks:
   * tag: Tag photos. `tag --title "Album I forgot to tag" --tags oops`
 
 ==YouTube==
+Common options:
+ * category: YouTube category to assign to the video. This is required, and a little tricky. Here's the mapping for YouTube categories to `--category` values (and capitalization counts!)
+|| *YouTube category* || *Value for* `--category` ||
+|| Autos & Vehicles || Autos ||
+|| Comedy || Comedy ||
+|| Education || Education ||
+|| Entertainment || Entertainment ||
+|| Film & Animation || Film ||
+|| Gaming || Games ||
+|| Howto & Style || Howto ||
+|| Music || Music ||
+|| News & Politics || News ||
+|| Nonprofits & Activism || Nonprofit ||
+|| People & Blogs || People ||
+|| Pets & Animals || Animals ||
+|| Science & Technology || Tech ||
+|| Sports || Sports ||
+|| Travel & Events || Travel ||
+
 Tasks:
   * delete: Delete videos. `delete --title ".*"`
   * list: List your videos. `list`
