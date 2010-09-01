@@ -139,3 +139,6 @@ $ ls /usr/local/lib/python2.6/site-packages gdata*
 }}}
 
 If PYTHONPATH is not set for you, or its directories do not contain the new gdata, set it to point at the directory where your newer version of gdata resides (`export PYTHONPATH=$PYTHONPATH:/path/to/directory`)
+
+=== Calendar adds events at the wrong time ===
+This is probably because you have not set up a time zone for your calendar. At [https://www.google.com/calendar the Calendar home page], in the panel of calendars to the left, click on the arrow to the right of the calendar name. Go to Calendar Settings, and change the setting under Calendar Time Zone.
