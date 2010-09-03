@@ -23,7 +23,7 @@ Tasks:
   * post: Upload posts. `post --tags "GoogleCL, awesome" "Here's a really short post. The next posts will be much longer!" ~/blog/2010/may/*`
   * tag: Label posts `tag --title "Dev post" --tags "Python, software"`
 
-Note: You can use --owner to specify another user's blog when listing posts, but you have to provide a Blogger ID (the number in http://www.blogger.com/profile/NUMBER), not the Google account name.
+Note: You can use `--owner` to specify another user's blog when listing posts, but you have to provide a Blogger ID (the number in http://www.blogger.com/profile/NUMBER), not the Google account name.
 
 ==Calendar==
 Common options:
@@ -60,6 +60,8 @@ Tasks:
   * list: List documents. `list title,url-direct --delimiter ": "`
   * upload: Upload documents. `upload the_bobs.csv ~/work/docs_to_share`
 
+Note: Uploading arbitrary files is only possible for Apps Premier customers, using the --no-convert option. See the FAQ.
+
 ==Picasa==
 Common options:
   * owner: Owner of the album you want to deal with. This will work with all tasks but create and delete. For example, you can add to collaborative albums this way: `post --title "our shared album" --owner "annie.adams" photo.jpg`
@@ -74,7 +76,7 @@ Tasks:
 
 ==YouTube==
 Common options:
- * category: YouTube category to assign to the video. This is required, and a little tricky. Here's the mapping for YouTube categories to `--category` values (and capitalization counts!)
+  * category: YouTube category to assign to the video. This is required, and a little tricky. Here's the mapping for YouTube categories to `--category` values (and capitalization counts!)
 || *YouTube category* || *Value for* `--category` ||
 || Autos & Vehicles || Autos ||
 || Comedy || Comedy ||
@@ -101,26 +103,42 @@ Tasks:
 =The List task=
 The list task can be given additional arguments to specify what exactly is being listed. For example,
 
-`$ google <service> list style1,style2,style3 --delimiter ": "`
+`$ google <service> list field1,field2,field3 --delimiter ": "`
 
-will output those styles, in that order, with ": " as a delimiter. Valid values for `<`style1`>` etc. are (with common services in parentheses):
-  * 'address' - postal addresses. (Contacts)
-  * 'author' - author(s). (Blogger)
-  * 'company' - company name. (Contacts)
-  * 'email' - email address(es). (Contacts)
-  * 'im' - instant messenger handles. (Contacts)
-  * 'notes' - notes on a contact. (Contacts)
-  * 'phone' - phone numbers. (Contacts)
-  * 'summary' - summary text.
-  * 'title' or 'name' - displayed title or name.
-  * 'url' - treated as 'url-direct' or 'url-site' depending on setting in preferences file.
-  * 'url-site' - url of the site.
+will output those fields, in that order, with ": " as a delimiter. Valid values for `<`field1`>` etc. are dependent on the service being used.
+
+Common (all services):
+  * 'summary' - summary text. Includes Picasa captions.
+  * 'title', 'name' - displayed title or name.
+  * 'url' - treated as 'url-direct' or 'url-site' depending on setting in preferences file. See the note at the end of this section.
+  * 'url-site' - url of the site associated with the resource.
   * 'url-direct' - url directly to the resource.
-  * 'when' - "when" data. (Calendar)
-  * 'where' - "where" data. (Calendar)
-  * 'xml' - full XML dump.
+  * 'xml' - dump the XML representation of the result.
 
-The difference between 'url-site' and 'url-direct' is best exemplified by a picasa PhotoEntry: 'url-site' gives a link to the photo in the user's album, 'url-direct' gives a link to the image url. If 'url-direct' is specified but is not applicable, 'url-site' is placed in its stead, and vice-versa.
+Blogger:
+  * 'author' - author of the post
+
+Calendar:
+  * 'when' - when an event takes place.
+  * 'where' - where the event takes place.
+
+Contacts:
+  * 'address', 'where' - postal addresses.
+  * 'birthday', 'bday' - birthday.
+  * 'email' - email address(es).
+  * 'event', 'dates', 'when' - events such as birthdays, anniversaries, etc.
+  * 'im' - instant messanger handles.
+  * 'name' - full name.
+  * 'nickname' - nickname.
+  * 'notes' - notes on a contact.
+  * 'organization', 'company' - company or organization.
+  * 'phone_number', 'phone' - phone numbers.
+  * 'relation' - names of relations, such as manager, spouse, etc.
+  * 'title', 'org_title' - job title.
+  * 'user_defined', 'other' - custom labels.
+  * 'website', 'links' - websites and links.
+
+The difference between 'url-site' and 'url-direct' is best exemplified by a picasa photo: 'url-site' gives a link to the photo in the user's album, 'url-direct' gives a link to the image url. If 'url-direct' is specified but is not applicable, 'url-site' is placed in its stead, and vice-versa.
 
 =Options=
 Some more details on the trickier options you can specify.
