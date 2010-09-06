@@ -1,12 +1,10 @@
 #summary How to use GoogleCL.
 #labels Featured
 Some terminology:
-  * service - The Google service being used (Picasa, Blogger, etc.) in all lowercase.
+  * service - The Google service being used (Picasa, Blogger, etc.)
   * task - The task that the service will be doing (tag, post, delete, etc.)
 
-You can also access help by typing {{{$ google.py help}}} or help on a specific service with {{{$ google help <service>}}}. For help with available options and what they mean, use {{{$ google --help}}}
-
-Note that the first time you use a service (like picasa or youtube), you'll have to use a web browser to grant access.  After that, GoogleCL will cache an oauth token in a config directory so that you don't have to login again for that service.
+You can also access help by typing `$ google help` or help on a specific service with `$ google help <service>`. For help with available options and what they mean, use `$ google --help`
 
 =Services=
 Each sub-section corresponds to a service, which lists the available tasks and some options commonly used with that service. Each task follows the format "task: description. `example`". Note that the `example` omits the initial `$ google <service>`
@@ -29,7 +27,7 @@ Note: You can use `--owner` to specify another user's blog when listing posts, b
 Common options:
   * cal: Specify the name of the calendar. This can be a regular expression. If this option is not given, the primary calendar is used.
   * date: Specify a date, or date range. Dates are inclusive, so `--date 2010-06-23,2010-06-25` will include the 23rd, 24th, and 25th of June.
-  * reminder: Add all of the default reminders to an added event with given warning time. Values are in minutes by default, larger time increments can be specified with h (hour) d (day) or w (week). For example: `--reminder 2h` will make one or more reminders be sent two hours before the event being added.
+  * reminder: (for add task only) Add a reminder to the events being added, one per default reminder type in yout calendar settings. Default is in minutes, though you can say something like `--reminder 2h` for reminder(s) two hours beforehand, `--reminder 1d` for one day, etc.
 
 Tasks:
   * add: Add event to calendar. `add "Dinner party with George tomorrow at 6pm" --reminder 1h`
@@ -64,7 +62,7 @@ Note: Uploading arbitrary files is only possible for Apps Premier customers, usi
 
 ==Picasa==
 Common options:
-  * owner: Owner of the album you want to deal with. This will work with all tasks but create and delete. For example, you can add to collaborative albums this way: `post --title "our shared album" --owner "annie.adams" photo.jpg`
+  * owner: Owner of the albums you want to deal with. This will work with all tasks but create and delete. For example, to download bob's album, add `--owner bob` to the "get" task. To post to your friend's album that she shared with you, add `--owner your_friend` to the "post" task.
 
 Tasks:
   * create: Create an album. `create --title "Summer Vacation 2009" --tags Vermont ~/photos/vacation2009/*`
@@ -156,7 +154,7 @@ The behavior given here is applicable to the calendar service.
   * '2010-06-01,2010-06-25': Between June 1st and June 25th, inclusive
   * ',2010-06-15': On or before June 15th
 
-Note that the delete task will still interpret 'date,' and ',date' indentically.
+Note that the delete task will still interpret 'date,' and ',date' identically.
 
 =Configuration=
 GoogleCL also incorporates a configuration file that you can use to customize its behavior, including automatic determination of command line options. Take a look at ConfigurationOptions for documentation on the configuration file.
