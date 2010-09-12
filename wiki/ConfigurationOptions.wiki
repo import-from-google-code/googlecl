@@ -34,7 +34,7 @@ Each of these values can be found in any section. The service being run will try
 
 ===General===
   * `* auth_browser: [<browser>]` Browser to launch when authenticating the OAuth request token. You should only need to authenticate to each service once.
-  * `* date_print_format: [<format string>]` Format to use when printing date information. See the Python "time" documentation for formats (http://docs.python.org/library/time.html#time.strftime). For example: "%m %d at %H" for "<month> <day> at <hour>"
+  * `* date_print_format: [<format string>]` Format to use when printing date information. See the Python "time" documentation for formats (http://docs.python.org/library/time.html#time.strftime). For example: "`%m %d at %H`" for "`<month> <day> at <hour>`"
   * `* delete_by_default: [True, False]` When prompted to confirm deletion of an object, hitting enter directly will confirm the delete.
   * `* missing_field_value: [<string>]` Placeholder string to use when listing an invalid attribute, for example, the url of a contact.
   * `* url_style: [site, direct]` Which sub-style to use for listing urls. "Site" will typically put you at the website, while "direct" is usually a link directly to the resource.
