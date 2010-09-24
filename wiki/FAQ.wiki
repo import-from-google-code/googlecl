@@ -90,19 +90,21 @@ You need a later version of the [http://code.google.com/p/gdata-python-client/ g
 Upgrading to gdata 2.0.12 seems to fix this. It has been seen in versions as late as 2.0.2.
 
 === Timestamp too far from current time ===
-pigritor reports:
-"yep. problem was in system and kernel clock.
-I read this: http://en.gentoo-wiki.com/wiki/Time_Synchronization
-then:"
-{{{
-$ sudo ntpdate -ds google.com;
-$ sudo tzselect;
-$ TZ='[SELECTED_TIME_ZONE]'; export TZ;  #Substitute your timezone, for example, 'America/Toronto'
-$ sudo hwclock --systohc
-}}}
-"and that 'time error' gone "
+It's very likely that your system clock is out of sync with reality. Your best option is probably to sync with a time server. I recommend Googling around for the way to do this for your system, but the following tips MAY help.
 
-Issue 55 has some more solutions for Linux-based systems, Issue 226 for Windows.
+This issue was originally tracked by Issue 55.
+
+==== POSIX systems and their ilk ====
+(almost everything but Windows)
+You can sync from the command line with `sudo ntpdate -s ntp.time.ca` with the following caveats:
+  * Gentoo and maybe others use htpdate, not ntpdate, and the options are probably different.
+  * ntp.time.ca is a time server in Canada. [http://tf.nist.gov/tf-cgi/servers.cgi See here] for a list of servers.
+  * This will not touch your timezone setting, so the date may still look wrong.
+
+If your system clock is always off when you boot up, your hardware clock is probably off and your OS isn't copying the (now correct) system clock to it. You can use `sudo hwclock --systohc` to set the hardware clock off the system clock, but READ THE MANUAL. Use `--utc` as appropriate.
+
+==== Windows ====
+[http://www.microsoft.com/windowsxp/using/setup/maintain/setclock.mspx These instructions] are written for XP, but the steps should be very similar for all versions of Windows.
 
 === Won't work from behind a proxy ===
 The short answer seems to be "Make sure http:// and https:// are included in your proxy settings." Using just myproxy:portnumber may work for other programs, but gdata requires the protocol as well.
