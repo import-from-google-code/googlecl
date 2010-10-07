@@ -1,15 +1,17 @@
 #summary Frequently asked questions and troubleshooting
 
+<wiki:toc max_depth="0" />
+
 = FAQ =
 
-=== Will you support XXX? ===
+== Will you support XXX? ==
 We're building on top of [http://code.google.com/p/gdata-python-client/ gdata-python-client], so if you don't see it supported there, we won't be supporting it in the foreseeable future.
 
 If you want a service that isn't supported by gdata-python-client, check their [http://code.google.com/p/gdata-python-client/issues/list issue tracker] for a request to support said service. If the issue exists, star it. If not, submit a new issue asking for them to support it.
 
 To request a feature for a service that we do support, file an issue on our [http://code.google.com/p/googlecl/issues/list issue tracker], following the same steps as above.
 
-=== How do I use the most recent version? / How do I run the code from the repository or trunk? ===
+== How do I use the most recent version? / How do I run the code from the repository or trunk? ==
 The svn repository always has the most recent patches already applied, though it may also have new and exciting bugs. If you're not familiar with subversion, you may want to read up on it [http://svnbook.red-bean.com/nightly/en/svn.intro.quickstart.html here].
   * Install svn if you don't have it. For Windows, try [http://tortoisesvn.tigris.org/ TortoiseSVN]
   * Checkout the trunk with `svn checkout http://googlecl.googlecode.com/svn/trunk/ googlecl`
@@ -18,7 +20,7 @@ The svn repository always has the most recent patches already applied, though it
 
 Provided Python can find the gdata libraries, that's it. Isn't Python great?
 
-=== How do I apply patches? ===
+== How do I apply patches? ==
 If you're as impatient as I am (not recommended), and on some flavor of Linux, try this:
 
 {{{
@@ -32,21 +34,21 @@ The path used in the `cd` command depends on your operating system and how Googl
 
 For Windows, you need to download a patch tool. You could also check out the svn repository by downloading an svn tool (try TortoiseSVN) and following the instructions [http://code.google.com/p/googlecl/source/checkout here]. The repository will have all patches from issues marked "fixed", but has the potential to be more unstable than the releases in the Downloads section.
 
-=== How do I uninstall GoogleCL? ===
+== How do I uninstall GoogleCL? ==
 Why would I tell you that? :P
 
 Installing from source with `python setup.py install` means you probably need to remove files by hand. [http://stackoverflow.com/questions/1550226/python-setup-py-uninstall This] provides some helpful instructions on how to do that.
 
 If you used the .deb, try `sudo dpkg -r /path/to/deb_file`. Replacing the -r with -P will also remove configuration files.
 
-=== Why isn't GoogleCL showing up in my "Authorized websites" list? ===
+== Why isn't GoogleCL showing up in my "Authorized websites" list? ==
 This process apparently takes a while for installed applications. If nothing has shown up after 3 hours, please file an issue.
 
-=== How do I make calendar events with numerical titles? ===
+== How do I make calendar events with numerical titles? ==
 Add single quotes and double quotes around the name. For example:
 {{{$ google calendar add '"12345"'}}}
 
-=== How do I convert new-version documents to work with GoogleCL? ===
+== How do I convert new-version documents to work with GoogleCL? ==
 The client libraries still have a few issues with the new document version that Google just rolled out. Here's how to convert those pesky docs using the version of GoogleCL in the repository (or, if I haven't updated this yet, whatever version is after 0.9.8)
   * Disable new-version documents. To do this, go to Settings->Documents settings->Editing, then uncheck the box that says "New version of Google documents." Settings should be a link in the upper right corner of the window.
   * IF you haven't already tried to update the document, download the new-style document. (`google docs get -n "name of document"`)
@@ -54,7 +56,7 @@ The client libraries still have a few issues with the new document version that 
   * If you're cautious, verify the document looks good using the web browser.
   * Delete the old document (optional, but recommended).
 
-=== Why can't I upload XXX to Docs? ===
+== Why can't I upload XXX to Docs? ==
 For all users, the version of gdata that you are using limits the types of documents you can upload. The list of extension: MIME content types are given below.
 
 gdata-1.2.4:
@@ -83,18 +85,18 @@ As of gdata-2.0.10, the following were added:
 
 = Troubleshooting =
 
-=== no attribute 'SetOAuthInputParameters' ===
+== no attribute 'SetOAuthInputParameters' ==
 You need a later version of the [http://code.google.com/p/gdata-python-client/ gdata python library]. The earliest version we tested with was 1.2.4.
 
-=== "ValueError: Invalid resource id" when using Docs ===
+== "ValueError: Invalid resource id" when using Docs ==
 Upgrading to gdata 2.0.12 seems to fix this. It has been seen in versions as late as 2.0.2.
 
-=== Timestamp too far from current time ===
+== Timestamp too far from current time ==
 It's very likely that your system clock is out of sync with reality. Your best option is probably to sync with a time server. I recommend Googling around for the way to do this for your system, but the following tips MAY help.
 
 This issue was originally tracked by Issue 55.
 
-==== POSIX systems and their ilk ====
+=== POSIX systems and their ilk ===
 (almost everything but Windows)
 You can sync from the command line with `sudo ntpdate -s ntp.time.ca` with the following caveats:
   * Gentoo and maybe others use htpdate, not ntpdate, and the options are probably different.
@@ -103,10 +105,10 @@ You can sync from the command line with `sudo ntpdate -s ntp.time.ca` with the f
 
 If your system clock is always off when you boot up, your hardware clock is probably off and your OS isn't copying the (now correct) system clock to it. You can use `sudo hwclock --systohc` to set the hardware clock off the system clock, but READ THE MANUAL. Use `--utc` as appropriate.
 
-==== Windows ====
+=== Windows ===
 [http://www.microsoft.com/windowsxp/using/setup/maintain/setclock.mspx These instructions] are written for XP, but the steps should be very similar for all versions of Windows.
 
-=== Won't work from behind a proxy ===
+== Won't work from behind a proxy ==
 The short answer seems to be "Make sure http:// and https:// are included in your proxy settings." Using just myproxy:portnumber may work for other programs, but gdata requires the protocol as well.
 
 You may want to check out [http://code.google.com/p/gdatacopier/wiki/ProxySupport these steps], which claim to be generic to the gdata-api.
@@ -123,7 +125,7 @@ upgrading to gdata-python-client 2.0.10 works for most or all users.
 
 Issue 44, Issue 220, and Issue 117 contain more information.
 
-=== GoogleCL behaves as if an earlier version of gdata is installed ===
+== GoogleCL behaves as if an earlier version of gdata is installed ==
 If you have installed version 2.0.x but are still getting bugs/issues tied to earlier versions of gdata, the older version may still be lurking on your machine. Ubuntu/Debian users can use
 {{{
 $ dpkg --list | grep gdata
@@ -142,5 +144,8 @@ $ ls /usr/local/lib/python2.6/site-packages gdata*
 
 If PYTHONPATH is not set for you, or its directories do not contain the new gdata, set it to point at the directory where your newer version of gdata resides (`export PYTHONPATH=$PYTHONPATH:/path/to/directory`)
 
-=== Calendar adds events at the wrong time ===
+== Calendar adds events at the wrong time ==
 This is probably because you have not set up a time zone for your calendar. At [https://www.google.com/calendar the Calendar home page], in the panel of calendars to the left, click on the arrow to the right of the calendar name. Go to Calendar Settings, and change the setting under Calendar Time Zone.
+
+== 'NoneType' object has no attribute 'rfind' ==
+First seen in Issue 306, this seems to only affect the Picasa service and only if you use gdata <= 1.2.4 (default version available in most GNU/Linux software repositories (i.e. Ubuntu)).  Upgrading to [http://code.google.com/p/gdata-python-client/downloads/detail?name=gdata-2.0.12.tar.gz gdata 2.0.12] seems to solve the problem.
