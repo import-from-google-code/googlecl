@@ -146,6 +146,3 @@ If PYTHONPATH is not set for you, or its directories do not contain the new gdat
 
 == Calendar adds events at the wrong time ==
 This is probably because you have not set up a time zone for your calendar. At [https://www.google.com/calendar the Calendar home page], in the panel of calendars to the left, click on the arrow to the right of the calendar name. Go to Calendar Settings, and change the setting under Calendar Time Zone.
-
-== 'NoneType' object has no attribute 'rfind' ==
-First seen in Issue 306, this seems to only affect the Picasa service and only if you use gdata <= 1.2.4 (default version available in most GNU/Linux software repositories (i.e. Ubuntu)).  Upgrading to [http://code.google.com/p/gdata-python-client/downloads/detail?name=gdata-2.0.12.tar.gz gdata 2.0.12] seems to solve the problem.
