@@ -1,0 +1,81 @@
+#summary How to install GoogleCL
+#labels Featured
+
+Please note that we haven't tried all of these methods, and there may be a package/port in your distribution's package manager that we're not aware of. If something seems amiss, ask around on the [http://groups.google.com/group/googlecl-discuss mailing list], or file an issue in the [http://code.google.com/p/googlecl/issues/list tracker].
+
+=Dependencies=
+ * [http://python.org/download/releases/ Python] 2.5 or 2.6
+ * [http://code.google.com/p/gdata-python-client/downloads/list gdata] >= 1.2.4 (preferably 2.0.x)
+
+Some features (namely downloading and editing with Docs) will not work for gdata 1.2.4, and have only been tested for versions >= 2, but may work just fine with >= 1.3.
+
+=All systems=
+==From source==
+Fortunately, installing GoogleCL is super easy, because it's all Python. Download the latest .tar.gz, unpack it, and run setup.py or run from the src/ directory.
+  * `tar xf googlecl-x.x.x.tar.gz`<br>
+  * `cd googlecl-x.x.x`
+
+then
+
+  * `python setup.py install --record=files.txt` (creates a list of files installed and saves it in files.txt)
+
+OR
+
+  * `cd src/`
+  * `python google.py`
+
+==PyPi (The Cheeseshop)==
+There are a few ways to access the cheeseshop:
+  * [http://pypi.python.org/pypi/setuptools easy_install]: `easy_install googlecl`
+  * [http://pypi.python.org/pypi/pip pip]: `pip install googlecl`
+  * [http://docs.activestate.com/activepython/2.6/pypm.html PyPM]: `pypm install googlecl`
+
+=GNU/Linux=
+==Debian and company (e.g. Ubuntu)==
+Installation should be very simple. Grab the .deb file from the Downloads section, cd to your downloads directory, and run
+
+   * `sudo dpkg -i googlecl*.deb`
+
+We've heard of problems from Hardy users and Debian Lenny (unless you've enabled backports).
+
+===python-gdata version===
+Note that most versions of Ubuntu only come standard with gdata 1.2.4, so you may see a message like:
+
+   * "Editing documents is not supported for gdata-python-client < 2.0"
+
+If you need to use tasks unsupported by gdata-1.2, you'll need to manually install a newer version of the gdata and gdata python libraries.  
+
+Or, you could try installing the python-gdata 2.0 .deb file for the upcoming 10.10 (maverick meerkat) release:
+
+sudo dpkg -i https://launchpad.net/ubuntu/+archive/primary/+files/python-gdata_2.0.8-1.1_all.deb
+
+It seemed to work for me on a Lucid machine, but Your Mileage May Vary.
+
+=Mac=
+
+[http://www.reddit.com/r/programming/comments/cgi57/introducing_the_google_command_line_tool/c0seufq Someone] on reddit says that it's available via macports:
+
+  * `sudo port install googlecl`
+
+If it's not there, run 'sudo port selfupdate', then try again.
+
+bodo.tasche reports that Brew has removed the googlecl package because it is part of pip. To install pip and then googlecl, use
+
+  * `brew install pip`
+  * `pip install googlecl`
+
+=Windows=
+==0.9.8 and up==
+The zip file available in the Downloads section contains an executable called "google" that you can run from inside that folder. Running it will bring up the interactive shell prompt (`> `) where you can enter commands such as `docs list` or `blogger post "Hello World!"`
+
+If it crashes, does nothing, or says "MCVCR71.dll not found" you may need a DLL from Microsoft installed via [http://www.microsoft.com/downloads/details.aspx?familyid=32bc1bee-a3f9-4c13-9c99-220b62a191ee&displaylang=en this tool].
+
+==0.9.7 and earlier==
+Isaac Truett wrote up a HOWTO on his blog:
+http://publicint.blogspot.com/2010/06/setup-googlecl-on-winxp.html
+
+=FreeBSD=
+There is a FreeBSD port available under net/googlecl
+
+=Other=
+Did we miss something? Let us know via the [http://groups.google.com/group/googlecl-discuss mailing list]. (The wiki comments are rarely, if ever, checked! But we appreciate the feedback when we see it!)
