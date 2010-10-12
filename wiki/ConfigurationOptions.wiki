@@ -7,6 +7,8 @@ Your configuration/preferences file is searched for in the following order:
   * ~/.googlecl (The configuration file home from v0.9.8 and earlier)
 The file is assumed to be called "config." If no file is found, one is created. On POSIX systems, in the directory specified by the second item in the above list. On other systems, in ~/.googlecl as before. You can also specify a file with the --config option.
 
+Windows users: Your configuration and data folder should be in the same folder as Documents, Photos, My Videos, etc. I believe it's typically C:\Users\USERNAME\.googlecl for Windows 7, and C:\Documents and Settings\USERNAME for XP.
+
 ==Options==
 Each option description follows the format `<name>: [<values>]` description
 
