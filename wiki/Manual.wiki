@@ -75,10 +75,10 @@ Tasks:
   * post: Add photos to an album. `post --title "Summer Vacation 2008" ~/old_photos/*.jpg`
   * tag: Tag photos. `tag --title "Album I forgot to tag" --tags oops`
 
-==YouTube==
+==!YouTube==
 Common options:
-  * category: YouTube category to assign to the video. This is required, and a little tricky. Here's the mapping for YouTube categories to `--category` values (and capitalization counts!)
-|| *YouTube category* || *Value for* `--category` ||
+  * category: !YouTube category to assign to the video. This is required, and a little tricky. Here's the mapping for !YouTube categories to `--category` values (and capitalization counts!)
+|| *!YouTube category* || *Value for* `--category` ||
 || Autos & Vehicles || Autos ||
 || Comedy || Comedy ||
 || Education || Education ||
@@ -94,6 +94,8 @@ Common options:
 || Science & Technology || Tech ||
 || Sports || Sports ||
 || Travel & Events || Travel ||
+
+If there's a category you frequently classify your videos as, I'd recommend sticking a default value in your [ConfigurationOptions config file]
 
 Tasks:
   * delete: Delete videos. `delete --title ".*"`
@@ -138,6 +140,19 @@ Contacts:
   * 'title', 'org_title' - job title.
   * 'user_defined', 'other' - custom labels.
   * 'website', 'links' - websites and links.
+
+Picasa:
+  * 'distance' - distance between the camera and object.
+  * 'ev' - [http://en.wikipedia.org/wiki/Exposure_value exposure value].
+  * 'exposure', 'shutter', 'speed' - Exposure time used.
+  * 'flash' - whether flash was used or not.
+  * 'focallength' - focal length used.
+  * 'fstop' - fstop value.
+  * 'imageUniqueId', 'id' - EXIF unique image ID.
+  * 'iso' - ISO equivalent value of the film speed.
+  * 'make' - make of the camera.
+  * 'model' - camera model.
+  * 'time', 'when' - timestamp of when the photo was taken (in milliseconds since 1/1/1970).
 
 The difference between 'url-site' and 'url-direct' is best exemplified by a picasa photo: 'url-site' gives a link to the photo in the user's album, 'url-direct' gives a link to the image url. If 'url-direct' is specified but is not applicable, 'url-site' is placed in its stead, and vice-versa.
 
