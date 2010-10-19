@@ -20,6 +20,19 @@ The svn repository always has the most recent patches already applied, though it
 
 Provided Python can find the gdata libraries, that's it. Isn't Python great?
 
+== How do I install a newer version of gdata? ==
+===All systems===
+Grab the latest version from [http://code.google.com/p/gdata-python-client/ the gdata homepage] and follow the install instructions in the download. Try to remove the previous version that you have installed (if any). If you've upgraded and an earlier version seems to be lurking, see the [http://code.google.com/p/googlecl/wiki/FAQ#GoogleCL_behaves_as_if_an_earlier_version_of_gdata_is_installed troubleshooting] section.
+
+===Debian/Ubuntu===
+Debian/Ubuntu users can use their package manager to remove the old version installed:
+
+`sudo dpkg -r python-gdata`
+
+You may also be able to install the 2.0.8 deb file from the upcoming Ubuntu release:
+
+`sudo dpkg -i https://launchpad.net/ubuntu/+archive/primary/+files/python-gdata_2.0.8-1.1_all.deb`
+
 == How do I apply patches? ==
 If you're as impatient as I am (not recommended), and on some flavor of Linux, try this:
 
