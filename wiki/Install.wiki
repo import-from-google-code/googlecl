@@ -7,7 +7,7 @@ Please note that we haven't tried all of these methods, and there may be a packa
  * [http://python.org/download/releases/ Python] 2.5 or 2.6
  * [http://code.google.com/p/gdata-python-client/downloads/list gdata] >= 1.2.4 (preferably 2.0.x)
 
-Some features (namely downloading and editing with Docs) will not work for gdata 1.2.4, and have only been tested for versions >= 2, but may work just fine with >= 1.3.
+While we've made efforts to be backwards compatible with gdata 1.2.4, there are a few things that will not work. For a list of known issues with 1.2.4, see the [http://code.google.com/p/googlecl/wiki/FAQ#Troubleshooting troubleshooting guide]
 
 =All systems=
 ==From source==
@@ -24,7 +24,7 @@ OR
   * `cd src/`
   * `python google.py`
 
-==PyPi (The Cheeseshop)==
+==!PyPi (The Cheeseshop)==
 There are a few ways to access the cheeseshop:
   * [http://pypi.python.org/pypi/setuptools easy_install]: `easy_install googlecl`
   * [http://pypi.python.org/pypi/pip pip]: `pip install googlecl`
@@ -36,7 +36,7 @@ Installation should be very simple. Grab the .deb file from the Downloads sectio
 
    * `sudo dpkg -i googlecl*.deb`
 
-We've heard of problems from Hardy users and Debian Lenny (unless you've enabled backports).
+*Note:* We've heard of problems from Hardy users and Debian Lenny (unless you've enabled backports).
 
 ===python-gdata version===
 Note that most versions of Ubuntu only come standard with gdata 1.2.4, so you may see a message like:
