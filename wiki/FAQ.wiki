@@ -21,6 +21,8 @@ The svn repository always has the most recent patches already applied, though it
 Provided Python can find the gdata libraries, that's it. Isn't Python great?
 
 == How do I install a newer version of gdata? ==
+*Note:* After following the instructions below, you should probably re-run any recent commands with `--force-auth` to ensure you're not using an outdated data model for the access tokens. You can also just remove the stored tokens, typically stored in ~/.local/share/googlecl/
+
 ===All systems===
 Grab the latest version from [http://code.google.com/p/gdata-python-client/ the gdata homepage] and follow the install instructions in the download. Try to remove the previous version that you have installed (if any). If you've upgraded and an earlier version seems to be lurking, see the [http://code.google.com/p/googlecl/wiki/FAQ#GoogleCL_behaves_as_if_an_earlier_version_of_gdata_is_installed troubleshooting] section.
 
@@ -98,6 +100,14 @@ As of gdata-2.0.10, the following were added:
 
 = Troubleshooting =
 
+== Known issues with gdata 1.2.4 ==
+The latest version of the gdata python client that comes with Ubuntu < 10.10 (Maverick Meerkat) is 1.2.4, which causes the following known problems:
+  * Cannot upload documents with non-ascii characters (Issue 195, comment 23)
+  * Apps Premium users cannot use the --no-convert option (Issue 185, comment 27)
+  * Docs 'get' and 'edit' tasks will not work.
+
+Other flavors of GNU/Linux may have outdated versions of python-gdata in their package managers, and experience similar problems.
+
 == no attribute 'SetOAuthInputParameters' ==
 You need a later version of the [http://code.google.com/p/gdata-python-client/ gdata python library]. The earliest version we tested with was 1.2.4.
 
@@ -156,6 +166,8 @@ $ ls /usr/local/lib/python2.6/site-packages gdata*
 }}}
 
 If PYTHONPATH is not set for you, or its directories do not contain the new gdata, set it to point at the directory where your newer version of gdata resides (`export PYTHONPATH=$PYTHONPATH:/path/to/directory`)
+
+After successfully removing the old version of gdata, you'll probably have to get new authorization tokens. You can force re-authentication by adding `--force-auth` to a command, which will discard the old token upon successfully authenticating.
 
 == Calendar adds events at the wrong time ==
 This is probably because you have not set up a time zone for your calendar. At [https://www.google.com/calendar the Calendar home page], in the panel of calendars to the left, click on the arrow to the right of the calendar name. Go to Calendar Settings, and change the setting under Calendar Time Zone.
