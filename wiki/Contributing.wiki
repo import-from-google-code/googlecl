@@ -5,7 +5,7 @@
 The easiest way to help is to use the program and file an [http://code.google.com/p/googlecl/issues/list issue] when you find something that seems amiss. You can also give less structured feedback on the [http://groups.google.com/group/googlecl-discuss Discussion group]
 
 ==Developing==
-We currently have a very loose structure for contributing code. The easiest way to contribute code is to find (or submit) an issue in the [http://code.google.com/p/googlecl/issues/list Issues Tracker], write code that addresses the issue, then upload a subversion diff that patches the issue. Be sure to check out the [http://groups.google.com/group/googlecl-discuss Discussion group] and [StyleGuide]
+The easiest way to contribute code is to find (or submit) an issue in the [http://code.google.com/p/googlecl/issues/list Issues Tracker], write code that addresses the issue, then upload a subversion diff that patches the issue using upload-diff.py, included in the trunk of the repository. Be sure to check out the [http://groups.google.com/group/googlecl-discuss Discussion group] and [StyleGuide]
 
 Before we can use your patch, though, you have to sign something.
  * If you are an individual writing original source code and you're sure you own the intellectual property, then you'll need to sign an [http://code.google.com/legal/individual-cla-v1.0.html individual CLA].
