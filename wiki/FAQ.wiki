@@ -16,7 +16,7 @@ The svn repository always has the most recent patches already applied, though it
   * Install svn if you don't have it. For Windows, try [http://tortoisesvn.tigris.org/ TortoiseSVN]
   * Checkout the trunk with `svn checkout http://googlecl.googlecode.com/svn/trunk/ googlecl`
   * Navigate to googlecl/src
-  * Run the file named "google" either by passing it as an argument to your python executable (`$ python google`) or making it executable.
+  * Run the file named "google.py" either by passing it as an argument to your python executable (`$ python google.py`) or making it executable.
 
 Provided Python can find the gdata libraries, that's it. Isn't Python great?
 
