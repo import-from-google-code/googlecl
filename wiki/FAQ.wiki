@@ -146,7 +146,22 @@ TypeError: coercing to Unicode: need string or buffer, NoneType found
 
 upgrading to gdata-python-client 2.0.10 works for most or all users.
 
-Issue 44, Issue 220, and Issue 117 contain more information.
+Issue 44 and Issue 220 tracked these issues
+
+=== Invalid literal for int() with base 10 ===
+If you have your proxy settings defined in the style `user:password@host:port` you are probably seeing a stack trace ending in:
+
+{{{
+File "/usr/local/lib/python2.6/dist-packages/atom/http.py", line 278, in _prepare_connection
+    return httplib.HTTPConnection(proxy_url.host, int(proxy_url.port))
+ValueError: invalid literal for int() with base 10: 'password@host'
+}}}
+
+You need to remove the username and password information from the `http_proxy` and `https_proxy` environment variables and put them into `proxy_username` and `proxy_password`.
+
+There is a patch to gdata-python-client to allow proxy authentication info in `http_proxy` and `https_proxy` [http://codereview.appspot.com/2915041 here], the gdata issue is [http://code.google.com/p/gdata-python-client/issues/detail?id=414 here].
+
+Issue 117 originally tracked this issue.
 
 == GoogleCL behaves as if an earlier version of gdata is installed ==
 If you have installed version 2.0.x but are still getting bugs/issues tied to earlier versions of gdata, the older version may still be lurking on your machine. Ubuntu/Debian users can use
