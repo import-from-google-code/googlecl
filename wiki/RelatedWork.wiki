@@ -11,3 +11,5 @@ WARNING: Tips / links / claims found on this page haven't necessarily been teste
  * Julien Danjou created a [http://julien.danjou.info/blog/2010.html#M%2Dx%20google%2Dmaps google-maps] command for emacs
 
  * [http://code.google.com/p/gcalcli/ gcalcli] is a neat python command line tool for using google calendar
+
+ * A [https://code.google.com/p/google-apps-groups-management-tools/ Google Groups management tool] has been put together by Kurt (as descrbed in [http://groups.google.com/group/googlecl-discuss/browse_thread/thread/2a956f15767d7fbd this post]).
