@@ -100,6 +100,13 @@ As of gdata-2.0.10, the following were added:
 
 = Troubleshooting =
 
+== !ImportError: no module named gdata.xxx.xxx ==
+You either (1) do not have gdata installed, or (2) the gdata location isn't known by Python.
+
+To solve (1), follow the instructions given above on installing newer versions of gdata.
+
+To solve (2), if you know the gdata library is installed, you can set the PYTHONPATH environment variable to include the library's location.
+
 == Known issues with gdata 1.2.4 ==
 The latest version of the gdata python client that comes with Ubuntu < 10.10 (Maverick Meerkat) is 1.2.4, which causes the following known problems:
   * Cannot upload documents with non-ascii characters (Issue 195, comment 23)
