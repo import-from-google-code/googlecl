@@ -8,6 +8,8 @@ Some terminology:
 
 You can also access help by typing `$ google help` or help on a specific service with `$ google help <service>`. For help with available options and what they mean, use `$ google --help`
 
+If you are looking for instructions for the Discovery APIs, use the DiscoveryManual.
+
 =Services=
 Each sub-section corresponds to a service, which lists the available tasks and some options commonly used with that service. Each task follows the format "task: description. `example`". Note that the `example` omits the initial `$ google <service>`
 
@@ -205,7 +207,7 @@ Note that the delete task will still interpret 'date,' and ',date' identically.
 =Configuration=
 GoogleCL also incorporates a configuration file that you can use to customize its behavior, including automatic determination of command line options. Take a look at ConfigurationOptions for documentation on the configuration file.
 
-=Search, Buzz, Gmail, etc.=
+=Search, Plus, Gmail, etc.=
 
 We'd love to support more Google services with GoogleCL, but we're currently limited by the [http://code.google.com/apis/gdata/docs/directory.html availability of gdata APIs].
 
