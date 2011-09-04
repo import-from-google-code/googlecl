@@ -13,7 +13,7 @@ While we've made efforts to be backwards compatible with gdata 1.2.4, there are 
 ==From source==
 Fortunately, installing GoogleCL is super easy, because it's all Python. Download the latest .tar.gz, unpack it, and run setup.py to install it system wide or just run it from the src/ directory.
 
-  * `tar xf googlecl-x.x.x.tar.gz`<br>
+  * `tar xvf googlecl-x.x.x.tar.gz`<br>
   * `cd googlecl-x.x.x`
 
 then
