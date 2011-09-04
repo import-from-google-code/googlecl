@@ -23,7 +23,7 @@ then
 OR
 
   * `cd src/`
-  * `python google.py`
+  * `./google`
 
 ==!PyPi (The Cheeseshop)==
 There are a few ways to access the cheeseshop:
