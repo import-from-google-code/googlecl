@@ -320,10 +320,10 @@ You know the only field that matters to you right now is the title, so that will
 
 Schemas correspond to a JSON object, and are entered under the ‘body’ parameter. So one valid method call would be:
 
-{{{$ google tasks tasks insert --body ‘{“title”: “Use GoogleCL!”}’}}}
+{{{$ google tasks tasks insert --body '{“title”: “Use GoogleCL!”}'}}}
 
 There are a few issues with this though - for one, JSON can be annoying to enter on the command line, since you need to make sure that the quotes don’t vanish and all the brackets are correct (Note: quotes are required around JSON field names, and don’t vanish in interactive mode). Fortunately, GoogleCL is able to automatically put body parameters into the JSON. Thus, the method is simplified to:
 
-{{{$ google tasks tasks insert --title “Use GoogleCL!”}}}
+{{{$ google tasks tasks insert --title 'Use GoogleCL!'}}}
 
 And that’s it! You’ve successfully created a new task.
