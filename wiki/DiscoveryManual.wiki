@@ -193,7 +193,7 @@ Posting something to Buzz
 
 Translate something to another language
 
-{{{$ google translate translations "Hello, world!" es}}}
+{{{$ google translate translations "Hello, world" es}}}
 
 = Walkthrough =
 
