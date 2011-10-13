@@ -40,7 +40,7 @@ Like before, GoogleCL will attempt to identify what your intent is. Some of the 
 
 For example, a command to create a new shortened URL using Url Shortener could be:
 
-{{{$ google urlshortener v1 url insert --body {"longUrl": "www.google.com"}}}}
+{{{$ google urlshortener v1 url insert --body '{"longUrl": "www.google.com"}'}}}
 
 Some of this may be trimmed down - for example, GoogleCL will use the newest version of the API by default. Additionally, UrlShortener only has one resource, url, so it is automatically selected. Finally, parameters can be inserted automatically into the `body` parameter. This shortens the command to:
 
@@ -69,7 +69,7 @@ The `help` function works a bit differently for the new APIs. For one, it can pr
 Some methods require a JSON request to be attached, which may be specified using the `body` parameter. Alternatively, it is possible for fields to be put into the body automatically.
 Example:
 
-{{{$ google urlshortener insert --body ‘{“longUrl”: “www.google.com”}’}}}
+{{{$ google urlshortener insert --body '{"longUrl": "www.google.com"}'}}}
 
 This may be shortened to:
 
@@ -83,9 +83,9 @@ Two things of note:
 
 Example of nesting - note that in the following command, the body has a subfield, ‘object’. If one were to investigate the schema, they would see that the ‘object’ field corresponds to an object, opposed to a string or other type of information. Arrays are also possible for some methods.
 
-{{{$ google buzz activities insert --userId @me --title GoogleCL --object ‘{"content": "Posting from GoogleCL!", "type": "note"}’}}}
+{{{$ google buzz activities insert --userId @me --title GoogleCL --object '{"content": "Posting from GoogleCL!", "type": "note"}'}}}
 
-{{{$ google buzz activities insert --userId @me --body ‘{"title": "GoogleCL", "object": {"content": "Posting from GoogleCL!", "type": "note"}}’}}}
+{{{$ google buzz activities insert --userId @me --body '{"title": "GoogleCL", "object": {"content": "Posting from GoogleCL!", "type": "note"}}'}}}
 
 ==The Fields Parameter==
 
@@ -105,7 +105,7 @@ Example:
  * {{{longUrl: http://www.google.com/}}}
  * {{{id: http://goo.gl/ENYw5}}}
 
-==Configuration Options and Defaults==
+==Configration Options and Defaults==
 
 The config file may be edited using the command `edit config`. Once there, it is possible to edit GoogleCL's settings and defaults.
 
@@ -169,7 +169,7 @@ Creating a new short URL
 
 {{{$ google urlshortener insert --longUrl www.google.com}}}
 
-{{{$ google urlshortener insert --body {"longUrl": "www.google.com"}}}}
+{{{$ google urlshortener insert --body '{"longUrl": "www.google.com"}'}}}
 
 Retrieving a shortened URL
 
@@ -183,13 +183,13 @@ Creating a new task
 
 {{{$ google tasks tasks insert @default --title "Test GoogleCL"}}}
 
-{{{$ google tasks tasks insert @default --body {"title": "Test GoogleCL"}}}}
+{{{$ google tasks tasks insert @default --body '{"title": "Test GoogleCL"}'}}}
 
 Posting something to Buzz
 
-{{{$ google buzz activities insert --userId @me --title GoogleCL --object {"content": "Posting from GoogleCL!", "type": "note"}}}}
+{{{$ google buzz activities insert --userId @me --title GoogleCL --object '{"content": "Posting from GoogleCL!", "type": "note"}'}}}
 
-{{{$ google buzz activities insert --userId @me --body {"title": "GoogleCL", "object": {"content": "Posting from GoogleCL!", "type": "note"}}}}}
+{{{$ google buzz activities insert --userId @me --body '{"title": "GoogleCL", "object": {"content": "Posting from GoogleCL!", "type": "note"}}'}}}
 
 Translate something to another language
 
