@@ -1,0 +1,13 @@
+#summary Which python-gdata versions to use and why
+#labels Featured
+
+= Introduction =
+
+Currently, only gdata-2.0.10, 2.0.12, 2.0.13 and 2.0.14 fully support uploading to Google Docs.
+
+= Details =
+
+For lots of details (and one very helpful table), please see the following blog posts:
+
+<a href="http://credentiality2.blogspot.com/2011/11/untangling-gdata.html">Credentiality's Post</a> (<--The gdata table is on this one)
+<a href="http://atechyblog.blogspot.com/2011/11/python-gdata.html">Coilamg's Post</a>
