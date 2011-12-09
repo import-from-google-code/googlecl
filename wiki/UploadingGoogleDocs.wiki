@@ -35,8 +35,8 @@ The following versions of python-gdata do not support uploading *anything* to Go
 
 = Details =
 
-For more details (and one helpful table), please see the following blog posts:
+For more details, please see the following blog posts:
 
-<a href="http://credentiality2.blogspot.com/2011/11/untangling-gdata.html">Credentiality's post</a> has the gdata table.
+<a href="http://credentiality2.blogspot.com/2011/11/untangling-gdata.html">Credentiality's post</a> has a useful table.
 <br>
 <a href="http://atechyblog.blogspot.com/2011/11/python-gdata.html">Coilamg's post</a> has several potential error messages.
