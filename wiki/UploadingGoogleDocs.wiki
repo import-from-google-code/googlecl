@@ -12,7 +12,7 @@ Currently, _only the following versions_ of python-gdata fully support uploading
 
 <br>
 <br>
-The following versions of python-gdata support uploading _some_ file types, like text files, but *do not* support uploading arbitrary file types (like PDFs).
+The following versions of python-gdata support uploading _some_ file types, like text files, but do not support uploading arbitrary file types (like PDFs).
 
 2.0.0<br>
 2.0.1<br>
@@ -22,7 +22,7 @@ The following versions of python-gdata support uploading _some_ file types, like
 
 <br>
 <br>
-The following versions of python-gdata do not support uploading anything to Google Docs.
+The following versions of python-gdata do not support uploading *anything* to Google Docs.
 
 2.0.5<br>
 2.0.6<br>
