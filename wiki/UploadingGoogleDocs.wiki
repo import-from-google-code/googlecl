@@ -3,7 +3,13 @@
 
 = Introduction =
 
-Currently, only gdata-2.0.10, 2.0.12, 2.0.13 and 2.0.14 fully support uploading to Google Docs.
+Currently, only the following versions of python-gdata fully support uploading to Google Docs via GoogleCL.
+
+2.0.10
+2.0.12
+2.0.13
+2.0.14 
+
 
 = Details =
 
