@@ -30,6 +30,7 @@ The following versions of python-gdata do not support uploading *anything* to Go
 2.0.8<br>
 2.0.9<br>
 2.0.11<br>
+2.0.15<br>
 <br>
 <br>
 
