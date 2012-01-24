@@ -5,7 +5,7 @@ Please note that we haven't tried all of these methods, and there may be a packa
 
 =Dependencies=
  * [http://python.org/download/releases/ Python] 2.5 or 2.6
- * [http://code.google.com/p/gdata-python-client/downloads/list gdata] >= 1.2.4 (preferably 2.0.x)
+ * [http://code.google.com/p/gdata-python-client/downloads/list gdata] 2.0.12, 2.0.13, or 2.0.14
 
 While we've made efforts to be backwards compatible with gdata 1.2.4, there are a few things that will not work. For a list of known issues with 1.2.4, see the [http://code.google.com/p/googlecl/wiki/FAQ#Troubleshooting troubleshooting guide]
 
@@ -46,11 +46,6 @@ Note that most versions of Ubuntu only come standard with gdata 1.2.4, so you ma
 
 If you need to use tasks unsupported by gdata-1.2, you'll need to manually install a newer version of the gdata and gdata python libraries.  
 
-Or, you could try installing the python-gdata 2.0 .deb file for the upcoming 10.10 (maverick meerkat) release:
-
-sudo dpkg -i https://launchpad.net/ubuntu/+archive/primary/+files/python-gdata_2.0.8-1.1_all.deb
-
-It seemed to work for me on a Lucid machine, but Your Mileage May Vary.
 
 =Mac=
 
