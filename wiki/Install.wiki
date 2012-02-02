@@ -5,13 +5,13 @@ Please note that we haven't tried all of these methods, and there may be a packa
 
 =Dependencies=
  * [http://python.org/download/releases/ Python] 2.5 or 2.6
- * [http://code.google.com/p/gdata-python-client/downloads/list gdata] 2.0.12, 2.0.13, or 2.0.14
+ * [http://code.google.com/p/gdata-python-client/downloads/list gdata] 2.0.12 through 2.0.16
 
 While we've made efforts to be backwards compatible with gdata 1.2.4, there are a few things that will not work. For a list of known issues with 1.2.4, see the [http://code.google.com/p/googlecl/wiki/FAQ#Troubleshooting troubleshooting guide]
 
 =All systems=
 ==From source==
-Fortunately, installing GoogleCL is super easy, because it's all Python. Download the latest .tar.gz, unpack it, and run setup.py to install it system wide or just run it from the src/ directory.
+Fortunately, installing GoogleCL is super easy, because it's all Python. Download the latest .tar.gz, unpack it, and run setup.py to install it system wide or just run it from the src/ directory. -- Note: as of February 2, 2012, docs are broken with the .tar.gz versions of GoogleCL. If you need docs support, [http://code.google.com/p/googlecl/source/checkout checkout GoogleCL from svn]. 
 
   * `tar xvf googlecl-x.x.x.tar.gz`<br>
   * `cd googlecl-x.x.x`
