@@ -5,7 +5,7 @@ Please note that we haven't tried all of these methods, and there may be a packa
 
 =Dependencies=
  * [http://python.org/download/releases/ Python] 2.5 or 2.6
- * [http://code.google.com/p/gdata-python-client/downloads/list gdata] 2.0.12 through 2.0.16 --Note the best version for docs support is 2.0.14 and in that case, you'll want to [http://code.google.com/p/googlecl/source/checkout checkout GoogleCL from svn].
+ * [http://code.google.com/p/gdata-python-client/downloads/list gdata] 2.0.12 through 2.0.16 --Note the best version for docs support is 2.0.14 
 
 
 While we've made efforts to be backwards compatible with gdata 1.2.4, there are a few things that will not work. For a list of known issues with 1.2.4, see the [http://code.google.com/p/googlecl/wiki/FAQ#Troubleshooting troubleshooting guide]
