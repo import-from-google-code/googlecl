@@ -42,6 +42,21 @@ Tasks:
 Note: The add task uses the 'Quick Add' feature, which you can read about [http://www.google.com/support/calendar/bin/answer.py?answer=36604#text here]
 *Warning*: Because the add task uses 'Quick Add', it will not work for non-English calendars. See Issue 211.
 
+*Note:* The default parameter is parsed for special values so you can set the time and the event length:
+
+  * {{{ add "Meeting on 29 December at 10pm" }}}
+
+will add the entry from 10pm till 11pm on Dec 29 with the description "Meeting"
+ 
+  * {{{ add "Meeting on 29 December at 8am till 2pm" }}}
+
+will add the entry from 8am till 2pm on Dec 29 with the description "Meeting"
+ 
+  * {{{ add "Meeting with Megi on 29 December from 8am till 2pm" }}}
+
+will add the entry from 8am till 2pm on Dec 29 with the description "Meeting with Megi"
+
+
 ==Contacts==
 Tasks:
   * add: Add contacts. `add "Jim Raynor, jimmy@noreaster.com" contacts.csv`
