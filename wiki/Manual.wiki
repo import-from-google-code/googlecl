@@ -61,7 +61,7 @@ will add the entry from 8am till 2pm on Dec 29 with the description "Meeting wit
 Tasks:
   * add: Add contacts. `add "Jim Raynor, jimmy@noreaster.com" contacts.csv`
   * delete: Delete contacts. `delete --title Jerkface`
-  * list: List contacts. `list name,email --title ".*bob.*" > the_bobs.csv`
+  * list: List contacts. `list --fields name,email --title ".*bob.*" > the_bobs.csv`
   * add-groups: Add contact groups. `add-groups "Work" "Friends"`
   * delete-groups: Delete contact groups. `delete-groups "Friends"`
   * list-groups: List contact groups. `list-groups "my group"`
