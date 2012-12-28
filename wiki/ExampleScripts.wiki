@@ -89,6 +89,20 @@ Requires: src Optional: cal
   * {{{add "Dinner party tomorrow at 6pm"}}}
   * {{{add --cal launch "Release .deb tomorrow" "Release .zip at 5"}}}
 
+*Note:* The src parameter is parsed for special values so you can set the time and the event length:
+
+  * {{{ add "Meeting on 29 December at 10pm" }}}
+
+will add the entry from 10pm till 11pm on Dec 29 with the description "Meeting"
+ 
+  * {{{ add "Meeting on 29 December at 8am till 2pm" }}}
+
+will add the entry from 8am till 2pm on Dec 29 with the description "Meeting"
+ 
+  * {{{ add "Meeting with Megi on 29 December from 8am till 2pm" }}}
+
+will add the entry from 8am till 2pm on Dec 29 with the description "Meeting with Megi"
+
 ==delete==
 Delete events.
 
