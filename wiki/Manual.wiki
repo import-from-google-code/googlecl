@@ -127,7 +127,7 @@ The list task can be given additional arguments to specify what exactly is being
 
 will output those fields, in that order, with ": " as a delimiter. Valid values for `<`field1`>` etc. are dependent on the service being used.
 
-Common (all services):
+==Common (all services):==
   * 'summary' - summary text. Includes Picasa captions.
   * 'title', 'name' - displayed title or name.
   * 'url' - treated as 'url-direct' or 'url-site' depending on setting in preferences file. See the note at the end of this section.
@@ -135,14 +135,14 @@ Common (all services):
   * 'url-direct' - url directly to the resource.
   * 'xml' - dump the XML representation of the result.
 
-Blogger:
+==Blogger:==
   * 'author' - author of the post
 
-Calendar:
+==Calendar:==
   * 'when' - when an event takes place.
   * 'where' - where the event takes place.
 
-Contacts:
+==Contacts:==
   * 'address', 'where' - postal addresses.
   * 'birthday', 'bday' - birthday.
   * 'email' - email address(es).
@@ -158,7 +158,7 @@ Contacts:
   * 'user_defined', 'other' - custom labels.
   * 'website', 'links' - websites and links.
 
-Picasa:
+==Picasa:==
   * 'distance' - distance between the camera and object.
   * 'ev' - [http://en.wikipedia.org/wiki/Exposure_value exposure value].
   * 'exposure', 'shutter', 'speed' - Exposure time used.
