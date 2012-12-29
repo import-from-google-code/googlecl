@@ -75,7 +75,7 @@ Tasks:
   * delete: Delete docs. `delete --title "Evidence"`
   * edit: Edit or view a document. `edit --title "Shopping list" --editor vim`
   * get: Download docs. `get --title "Homework [0-9]*"`
-  * list: List documents. `list title,url-direct --delimiter ": "`
+  * list: List documents. `list --fields title,url-direct --delimiter ": "`
   * upload: Upload documents. `upload the_bobs.csv ~/work/docs_to_share`
 
 Note: Uploading arbitrary files is only possible for Apps Premier customers, using the --no-convert option. See the FAQ.
