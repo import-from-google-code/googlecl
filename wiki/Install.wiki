@@ -4,7 +4,7 @@
 Please note that we haven't tried all of these methods, and there may be a package/port in your distribution's package manager that we're not aware of. If something seems amiss, ask around on the [http://groups.google.com/group/googlecl-discuss mailing list], or file an issue in the [http://code.google.com/p/googlecl/issues/list tracker].
 
 =Dependencies=
- * [http://python.org/download/releases/ Python] 2.5 or 2.6
+ * [http://python.org/download/releases/ Python] 2.5 - 2.9.  (There are known issues with python 3.2 and googlecl)
  * [http://code.google.com/p/gdata-python-client/downloads/list gdata]
 
 While we've made efforts to be backwards compatible all the way back to  gdata 1.2.4, there are a few things that will not work.  If you're having trouble, see the [http://code.google.com/p/googlecl/wiki/FAQ#Troubleshooting troubleshooting guide]
