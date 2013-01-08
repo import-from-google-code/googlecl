@@ -21,7 +21,7 @@ Common options:
 
 Tasks:
   * delete: Delete posts. `delete --title "Silly post number [0-9]*"`
-  * list: List posts. `list title,url-site`
+  * list: List posts. `list --fields=title,url-site`
   * post: Upload posts. `post --tags "GoogleCL, awesome" "Here's a really short post. The next posts will be much longer!" ~/blog/2010/may/*`
   * tag: Label posts `tag --title "Dev post" --tags "Python, software"`
 
@@ -88,7 +88,7 @@ Tasks:
   * create: Create an album. `create --title "Summer Vacation 2009" --tags Vermont ~/photos/vacation2009/*`
   * delete: Delete photos or albums. `delete --title "Stupid album"`
   * get: Download photos. `get --title "My Album" /path/to/download/folder`
-  * list: List photos or albums. `list title,url-direct --query "A tag"`
+  * list: List photos or albums. `list --fields=title,url-direct --query "A tag"`
   * post: Add photos to an album. `post --title "Summer Vacation 2008" ~/old_photos/*.jpg`
   * tag: Tag photos. `tag --title "Album I forgot to tag" --tags oops`
 
@@ -123,7 +123,7 @@ Tasks:
 =The List task=
 The list task can be given additional arguments to specify what exactly is being listed. For example,
 
-`$ google <service> list field1,field2,field3 --delimiter ": "`
+`$ google <service> list --fields=field1,field2,field3 --delimiter ": "`
 
 will output those fields, in that order, with ": " as a delimiter. Valid values for `<`field1`>` etc. are dependent on the service being used.
 
