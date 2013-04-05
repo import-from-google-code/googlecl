@@ -183,7 +183,7 @@ Requires: title
   * {{{list-groups "System Group:"}}}
 
 =Docs=
-*Note:* `--folder` will take the name of any folder, even subfolders.
+*Note:* `--folder` will take the name of any folder, even subfolders.  (Also note that --folder is currently broken; uploads all happen to the root folder).
 
 ==delete==
 Delete documents.
@@ -228,7 +228,7 @@ Upload a document.
 
 Requires: src Optional: title, folder, format
 
-*Note:* `--folder` will accept only one folder to upload into. If you have two or more folders with the same name, even subfolders, you will have to pick between them (hard to do when they have the same name).
+*Note:* `--folder` will accept only one folder to upload into. If you have two or more folders with the same name, even subfolders, you will have to pick between them (hard to do when they have the same name).  (Also note that --folder is currently broken; uploads all happen to the root folder).
 
 *Note:* Users with a Google Apps Premium account can use an additional option: `--no-convert`. This will let you upload arbitrary filetypes to Docs, like you can through the web interface. Unfortunately, this is not enabled for regular users.
 
